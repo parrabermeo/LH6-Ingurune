@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%" style="background:#0f172a; font-family: system-ui, -apple-system, sans-serif;">
+  <defs>
+    <linearGradient id="bgG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="cardG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#f59e0b" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bgG)"/>
+  <rect x="25" y="25" width="1150" height="625" rx="28" fill="none" stroke="#334155" stroke-width="2"/>
+
+  <!-- IZENBURUA -->
+  <g transform="translate(600, 52)" text-anchor="middle">
+    <rect x="-340" y="-30" width="680" height="60" rx="30" fill="#d97706" filter="url(#glow)"/>
+    <text y="8" fill="#ffffff" font-size="24" font-weight="900" letter-spacing="1">⚡ ENERGIA MOTA NAGUSIAK</text>
+    <text y="52" fill="#fbbf24" font-size="14" font-weight="700">LH 6. MAILA • NATURAN ETA GIZARTEAN AGERTZEN DIREN 7 FORMALITATEAK</text>
+  </g>
+
+  <!-- 7 TXARTELAK (3 GOIAN, 4 BEHEAN) -->
+  <!-- 1. MEKANIKOA -->
+  <g transform="translate(60, 125)">
+    <rect width="330" height="225" rx="20" fill="url(#cardG)" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="20" y="20" width="48" height="48" rx="14" fill="#0284c7"/>
+    <text x="44" y="52" fill="#fff" font-size="24" text-anchor="middle">🔨</text>
+    <text x="80" y="44" fill="#38bdf8" font-size="18" font-weight="900">ENERGIA MEKANIKOA</text>
+    <text x="80" y="62" fill="#94a3b8" font-size="12" font-weight="700">MUGIMENDUA ETA INDARRA</text>
+    <text x="20" y="105" fill="#e2e8f0" font-size="13" font-weight="500">
+      <tspan x="20" dy="0">• Gorputzen mugimenduak sortutakoa.</tspan>
+      <tspan x="20" dy="22">• Zenbat eta abiadura eta masa handiagoa,</tspan>
+      <tspan x="20" dy="20">  orduan eta energia mekaniko gehiago.</tspan>
+      <tspan x="20" dy="28" fill="#38bdf8" font-weight="700">💡 Adibidez:</tspan>
+      <tspan fill="#cbd5e1"> Mailu batek iltzea kolpatzean.</tspan>
+    </text>
+  </g>
+
+  <!-- 2. SOINUA -->
+  <g transform="translate(435, 125)">
+    <rect width="330" height="225" rx="20" fill="url(#cardG)" stroke="#ec4899" stroke-width="2"/>
+    <rect x="20" y="20" width="48" height="48" rx="14" fill="#db2777"/>
+    <text x="44" y="52" fill="#fff" font-size="24" text-anchor="middle">📢</text>
+    <text x="80" y="44" fill="#f472b6" font-size="18" font-weight="900">SOINU ENERGIA</text>
+    <text x="80" y="62" fill="#94a3b8" font-size="12" font-weight="700">BIBRAZIOEN INDARRA</text>
+    <text x="20" y="105" fill="#e2e8f0" font-size="13" font-weight="500">
+      <tspan x="20" dy="0">• Gorputzen bibrazioen bidez hedatzen da</tspan>
+      <tspan x="20" dy="20">  airean zehar uhinen moduan.</tspan>
+      <tspan x="20" dy="22">• Belarriko tinpanoa bibrarazten du.</tspan>
+      <tspan x="20" dy="28" fill="#f472b6" font-weight="700">💡 Adibidez:</tspan>
+      <tspan fill="#cbd5e1"> Bozgorailuak egindako soinua.</tspan>
+    </text>
+  </g>
+
+  <!-- 3. TERMIKOA -->
+  <g transform="translate(810, 125)">
+    <rect width="330" height="225" rx="20" fill="url(#cardG)" stroke="#f97316" stroke-width="2"/>
+    <rect x="20" y="20" width="48" height="48" rx="14" fill="#ea580c"/>
+    <text x="44" y="52" fill="#fff" font-size="24" text-anchor="middle">🔥</text>
+    <text x="80" y="44" fill="#fb923c" font-size="18" font-weight="900">ENERGIA TERMIKOA</text>
+    <text x="80" y="62" fill="#94a3b8" font-size="12" font-weight="700">BEROA ETA TENPERATURA</text>
+    <text x="20" y="105" fill="#e2e8f0" font-size="13" font-weight="500">
+      <tspan x="20" dy="0">• Gorputz beroetatik hotzetara igarotzen</tspan>
+      <tspan x="20" dy="20">  den barne-partikulen mugimendua.</tspan>
+      <tspan x="20" dy="22">• Zenbat eta beroago, energia handiagoa.</tspan>
+      <tspan x="20" dy="28" fill="#fb923c" font-weight="700">💡 Adibidez:</tspan>
+      <tspan fill="#cbd5e1"> Sua, eguzkia eta tostagailua.</tspan>
+    </text>
+  </g>
+
+  <!-- 4. ARGIA -->
+  <g transform="translate(60, 390)">
+    <rect width="245" height="235" rx="20" fill="url(#cardG)" stroke="#eab308" stroke-width="2"/>
+    <rect x="18" y="18" width="42" height="42" rx="12" fill="#ca8a04"/>
+    <text x="39" y="47" fill="#fff" font-size="20" text-anchor="middle">💡</text>
+    <text x="68" y="38" fill="#facc15" font-size="15" font-weight="900">ARGI ENERGIA</text>
+    <text x="68" y="54" fill="#94a3b8" font-size="11" font-weight="700">IKUSMENA &amp; EGUZKIA</text>
+    <text x="18" y="92" fill="#e2e8f0" font-size="12" font-weight="500">
+      <tspan x="18" dy="0">• Argiak garraiatzen duena.</tspan>
+      <tspan x="18" dy="18">• Fotosintesirako ezinbestekoa.</tspan>
+      <tspan x="18" dy="24" fill="#facc15" font-weight="700">💡 Adibidez:</tspan>
+      <tspan x="18" dy="16" fill="#cbd5e1">Kalkulagailu fotovoltaikoa</tspan>
+      <tspan x="18" dy="16" fill="#cbd5e1">eta eguzki-izpiak.</tspan>
+    </text>
+  </g>
+
+  <!-- 5. ELEKTRIKOA -->
+  <g transform="translate(335, 390)">
+    <rect width="245" height="235" rx="20" fill="url(#cardG)" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="18" y="18" width="42" height="42" rx="12" fill="#2563eb"/>
+    <text x="39" y="47" fill="#fff" font-size="20" text-anchor="middle">⚡</text>
+    <text x="68" y="38" fill="#60a5fa" font-size="15" font-weight="900">ELEKTRIKOA</text>
+    <text x="68" y="54" fill="#94a3b8" font-size="11" font-weight="700">KORRONTE ELEKTRIKOA</text>
+    <text x="18" y="92" fill="#e2e8f0" font-size="12" font-weight="500">
+      <tspan x="18" dy="0">• Elektroien mugimendua.</tspan>
+      <tspan x="18" dy="18">• Turbina bidez sortua, kablez</tspan>
+      <tspan x="18" dy="16">  etxeetara iristen dena.</tspan>
+      <tspan x="18" dy="24" fill="#60a5fa" font-weight="700">💡 Adibidez:</tspan>
+      <tspan x="18" dy="16" fill="#cbd5e1">Garbigailua, telebista</tspan>
+      <tspan x="18" dy="16" fill="#cbd5e1">eta tximistak.</tspan>
+    </text>
+  </g>
+
+  <!-- 6. KIMIKOA -->
+  <g transform="translate(610, 390)">
+    <rect width="245" height="235" rx="20" fill="url(#cardG)" stroke="#10b981" stroke-width="2"/>
+    <rect x="18" y="18" width="42" height="42" rx="12" fill="#059669"/>
+    <text x="39" y="47" fill="#fff" font-size="20" text-anchor="middle">🔋</text>
+    <text x="68" y="38" fill="#34d399" font-size="15" font-weight="900">ENERGIA KIMIKOA</text>
+    <text x="68" y="54" fill="#94a3b8" font-size="11" font-weight="700">SUBSTANTZIETAN GORDEA</text>
+    <text x="18" y="92" fill="#e2e8f0" font-size="12" font-weight="500">
+      <tspan x="18" dy="0">• Erreakzio kimikoek</tspan>
+      <tspan x="18" dy="18">  askatzen duten energia.</tspan>
+      <tspan x="18" dy="18">• Gorputzari indarra ematen dio.</tspan>
+      <tspan x="18" dy="24" fill="#34d399" font-weight="700">💡 Adibidez:</tspan>
+      <tspan x="18" dy="16" fill="#cbd5e1">Janaria, pilak eta</tspan>
+      <tspan x="18" dy="16" fill="#cbd5e1">autoen erregaiak.</tspan>
+    </text>
+  </g>
+
+  <!-- 7. NUKLEARRA -->
+  <g transform="translate(885, 390)">
+    <rect width="255" height="235" rx="20" fill="url(#cardG)" stroke="#a855f7" stroke-width="2"/>
+    <rect x="18" y="18" width="42" height="42" rx="12" fill="#9333ea"/>
+    <text x="39" y="47" fill="#fff" font-size="20" text-anchor="middle">☢️</text>
+    <text x="68" y="38" fill="#c084fc" font-size="15" font-weight="900">NUKLEARRA</text>
+    <text x="68" y="54" fill="#94a3b8" font-size="11" font-weight="700">ATOMOEN BARRUAN</text>
+    <text x="18" y="92" fill="#e2e8f0" font-size="12" font-weight="500">
+      <tspan x="18" dy="0">• Atomoen nukleoa apurtzean</tspan>
+      <tspan x="18" dy="18">  (fisioan) askatzen dena.</tspan>
+      <tspan x="18" dy="18">• Oso boteretsua eta arriskutsua.</tspan>
+      <tspan x="18" dy="24" fill="#c084fc" font-weight="700">💡 Adibidez:</tspan>
+      <tspan x="18" dy="16" fill="#cbd5e1">Zentral nuklearrak</tspan>
+      <tspan x="18" dy="16" fill="#cbd5e1">(Uranioa, Plutonioa).</tspan>
+    </text>
+  </g>
+</svg>
