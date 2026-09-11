@@ -117,7 +117,7 @@ const app = {
           <!-- CARD 1: EUROPA ETA EUSKADI (URDINA) -->
           <article onclick="app.goTo('mod1_sub1')" class="g-card rounded-[32px] overflow-hidden cursor-pointer flex flex-col justify-between border-t-8 border-t-blue-600 group">
             <div class="parallax-wrapper h-56 w-full relative">
-              <img src="/images/mapa_politiko_fisikoa.jpg" alt="Europa mapa fisikoa eta politikoa" class="parallax-img w-full h-full object-cover">
+              <img src="images/mapa_politiko_fisikoa.jpg" alt="Europa mapa fisikoa eta politikoa" class="parallax-img w-full h-full object-cover">
               <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
               <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-blue-600 text-white shadow-md">
                 1. GAIA • URDINA
@@ -147,7 +147,7 @@ const app = {
           <!-- CARD 2: IZAKI BIZIDUNEN EGITURA ETA UGALKETA (BERDEA) -->
           <article onclick="app.goTo('mod2_sub1')" class="g-card rounded-[32px] overflow-hidden cursor-pointer flex flex-col justify-between border-t-8 border-t-emerald-600 group">
             <div class="parallax-wrapper h-56 w-full relative">
-              <img src="/images/zelula_antolaketa.jpg" alt="Zelula eta antolaketa mailak" class="parallax-img w-full h-full object-cover">
+              <img src="images/zelula_antolaketa.jpg" alt="Zelula eta antolaketa mailak" class="parallax-img w-full h-full object-cover">
               <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
               <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-emerald-600 text-white shadow-md">
                 2. GAIA • BERDEA
@@ -207,7 +207,7 @@ const app = {
           <!-- CARD 4: ARO GARAIKIDEA (ARROSA / GORRIA) -->
           <article onclick="app.goTo('mod4_sub1')" class="g-card rounded-[32px] overflow-hidden cursor-pointer flex flex-col justify-between border-t-8 border-t-rose-600 group">
             <div class="parallax-wrapper h-56 w-full relative">
-              <img src="/images/iraultzen_aroa.jpg" alt="Aro Garaikidea eta Industria Iraultza" class="parallax-img w-full h-full object-cover">
+              <img src="images/iraultzen_aroa.jpg" alt="Aro Garaikidea eta Industria Iraultza" class="parallax-img w-full h-full object-cover">
               <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
               <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-rose-600 text-white shadow-md">
                 4. GAIA • ARROSA
@@ -494,7 +494,7 @@ const app = {
               <div class="mindmap-board">
                 <div class="mm-root-card border-blue-300">
                   <div class="w-full h-28 rounded-xl overflow-hidden mb-3 bg-blue-50 border border-blue-100">
-                    <img src="/images/mapa_politiko_fisikoa.jpg" alt="Europa mapa" class="w-full h-full object-cover">
+                    <img src="images/mapa_politiko_fisikoa.jpg" alt="Europa mapa" class="w-full h-full object-cover">
                   </div>
                   <span class="text-[10px] font-black uppercase tracking-wider text-blue-700 block">LH 6. MAILA • EUSKADI</span>
                   <h4 class="text-base font-black font-title text-gray-900 mt-1 leading-snug">Europa, Biztanleria & Migrazioak</h4>
@@ -652,7 +652,7 @@ const app = {
                 <!-- NODO NAGUSIA (ROOT) -->
                 <div class="mm-root-card border-emerald-300">
                   <div class="w-full h-28 rounded-xl overflow-hidden mb-3 bg-emerald-50 border border-emerald-100">
-                    <img src="/images/zelula_antolaketa.jpg" alt="Izaki bizidunak eta ugalketa" class="w-full h-full object-cover">
+                    <img src="images/zelula_antolaketa.jpg" alt="Izaki bizidunak eta ugalketa" class="w-full h-full object-cover">
                   </div>
                   <span class="text-[10px] font-black uppercase tracking-wider text-emerald-700 block">LH 6. MAILA • EUSKADI</span>
                   <h4 class="text-base font-black font-title text-gray-900 mt-1 leading-snug">Izaki Bizidunen Egitura eta Ugalketa</h4>
@@ -866,7 +866,7 @@ const app = {
               <div class="mindmap-board">
                 <div class="mm-root-card border-amber-300">
                   <div class="w-full h-28 rounded-xl overflow-hidden mb-3 bg-slate-900 border border-amber-200 flex items-center justify-center p-1">
-                    <img src="/images/energia_motak.svg" alt="Energia eta elektrizitatea" class="w-full h-full object-contain">
+                    <img src="images/energia_motak.svg" alt="Energia eta elektrizitatea" class="w-full h-full object-contain">
                   </div>
                   <span class="text-[10px] font-black uppercase tracking-wider text-amber-700 block">LH 6. MAILA • EUSKADI</span>
                   <h4 class="text-base font-black font-title text-gray-900 mt-1 leading-snug">Energia & Elektrizitatea</h4>
@@ -996,7 +996,7 @@ const app = {
               <div class="mindmap-board">
                 <div class="mm-root-card border-rose-300">
                   <div class="w-full h-28 rounded-xl overflow-hidden mb-3 bg-rose-50 border border-rose-100">
-                    <img src="/images/iraultzen_aroa.jpg" alt="Aro Garaikidea eta Industria Iraultza" class="w-full h-full object-cover">
+                    <img src="images/iraultzen_aroa.jpg" alt="Aro Garaikidea eta Industria Iraultza" class="w-full h-full object-cover">
                   </div>
                   <span class="text-[10px] font-black uppercase tracking-wider text-rose-700 block">LH 6. MAILA • EUSKADI</span>
                   <h4 class="text-base font-black font-title text-gray-900 mt-1 leading-snug">Aro Garaikidea (1789 - Gaur Egun)</h4>
@@ -1299,7 +1299,7 @@ const app = {
            class="p-3 bg-white hover:bg-blue-50/90 rounded-2xl border border-blue-100 hover:border-blue-400 shadow-sm hover:shadow-md cursor-pointer transition-all duration-200 hover:-translate-y-1 flex flex-col items-center text-center group relative"
            title="Egin klik ${c.name} estatuaren fitxa ikusteko">
         <div class="w-14 h-9 mb-2 rounded-lg overflow-hidden border border-slate-200 shadow-sm group-hover:scale-110 transition-transform duration-200 flex items-center justify-center bg-slate-100">
-          <img src="/images/flags/${c.code}.svg" alt="${c.name} bandera" class="w-full h-full object-cover">
+          <img src="images/flags/${c.code}.svg" alt="${c.name} bandera" class="w-full h-full object-cover">
         </div>
         <strong class="text-sm font-bold text-gray-900 group-hover:text-blue-700 leading-snug">${c.name}</strong>
         <span class="text-xs font-semibold text-blue-600 mt-1 flex items-center gap-1">
@@ -1377,7 +1377,7 @@ const app = {
     if (flagEl) {
       flagEl.innerHTML = `
         <div class="w-24 h-16 rounded-xl overflow-hidden shadow-md border-2 border-slate-200">
-          <img src="/images/flags/${c.code}.svg" alt="${c.name} bandera" class="w-full h-full object-cover">
+          <img src="images/flags/${c.code}.svg" alt="${c.name} bandera" class="w-full h-full object-cover">
         </div>
       `;
     }
