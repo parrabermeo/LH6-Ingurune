@@ -172,10 +172,10 @@ const SUBTOPICS_DATA = {
         <div id="map-content-politikoa" class="space-y-6">
           <div class="p-5 bg-blue-50/80 rounded-2xl border border-blue-200">
             <h4 class="text-xl font-black text-blue-950 flex items-center gap-2 mb-2">
-              <span>🏛️</span> <span>Europako 24 Estatuak eta Haien Hiriburuak</span>
+              <span>🏛️</span> <span>Europako 49 Estatuak eta Haien Hiriburuak</span>
             </h4>
             <p class="text-base text-gray-700 mb-4">
-              Arakatu curriculumeko 24 estatuak. Egin klik herrialde edo bandera bakoitzean bere fitxa osoa (hiriburua, biztanleria eta hizkuntza ofiziala) ikusteko:
+              Arakatu Europako 49 estatuak. Egin klik herrialde edo bandera bakoitzean bere fitxa osoa (hiriburua, biztanleria eta hizkuntza ofiziala) ikusteko:
             </p>
 
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3" id="countries-grid">
@@ -183,19 +183,9 @@ const SUBTOPICS_DATA = {
             </div>
           </div>
 
-          <!-- JOKO INTERAKTIBOA: HIRIBURUA ASMATU -->
-          <div class="p-6 bg-gradient-to-r from-blue-900 to-indigo-900 text-white rounded-2xl shadow-md space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-blue-500/40 text-blue-200 border border-blue-400/30">
-                🎮 ERRONKA AZKARRA
-              </span>
-              <span id="quiz-score" class="text-sm font-bold text-yellow-300">Puntuazioa: 0 / 5</span>
-            </div>
-            <h4 id="quiz-question" class="text-xl font-bold">Zein da Frantziako hiriburua?</h4>
-            <div id="quiz-options" class="grid grid-cols-2 gap-3">
-              <!-- Aukerak dinamikoki -->
-            </div>
-            <div id="quiz-feedback" class="text-sm font-semibold hidden"></div>
+          <!-- JOKO INTERAKTIBO BERRIA: BANDERA ETA HIRIBURUA (2 URRATSEKO ERRONKA) -->
+          <div id="flag-game-container" class="p-6 sm:p-8 bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-950 text-white rounded-3xl shadow-xl border-2 border-blue-400/30 space-y-6 relative overflow-hidden">
+            <!-- Jokoaren edukia dinamikoki renderizatuko da app.js bidez -->
           </div>
         </div>
 

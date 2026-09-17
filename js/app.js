@@ -1236,9 +1236,15 @@ const app = {
   // 1.3 EUROPAKO MAPAK (POLITIKOA & FISIKOA) - 24 ESTATUAK & BANDERAK
   // --------------------------------------------------------------------------
   countriesData: [
+    { code: 'al', name: 'Albania', cap: 'Tirana', pop: '2,7 milioi biztanle', lang: 'Albaniera', flag: '🇦🇱', region: 'Hegoaldeko Europa' },
     { code: 'de', name: 'Alemania', cap: 'Berlin', pop: '84,4 milioi biztanle', lang: 'Alemana', flag: '🇩🇪', region: 'Erdialdeko Europa' },
+    { code: 'ad', name: 'Andorra', cap: 'Andorra la Vella', pop: '80.000 biztanle', lang: 'Katalana', flag: '🇦🇩', region: 'Hegoaldeko Europa' },
+    { code: 'am', name: 'Armenia', cap: 'Erevan', pop: '2,8 milioi biztanle', lang: 'Armeniera', flag: '🇦🇲', region: 'Ekialdeko Europa / Kaukasoa' },
     { code: 'at', name: 'Austria', cap: 'Viena', pop: '9,1 milioi biztanle', lang: 'Alemana', flag: '🇦🇹', region: 'Erdialdeko Europa' },
+    { code: 'az', name: 'Azerbaijan', cap: 'Baku', pop: '10,1 milioi biztanle', lang: 'Azerbaijanera', flag: '🇦🇿', region: 'Ekialdeko Europa / Kaukasoa' },
     { code: 'be', name: 'Belgika', cap: 'Brusela', pop: '11,8 milioi biztanle', lang: 'Nederlandera, frantsesa eta alemana', flag: '🇧🇪', region: 'Mendebaldeko Europa' },
+    { code: 'by', name: 'Bielorrusia', cap: 'Minsk', pop: '9,2 milioi biztanle', lang: 'Bielorrusiera eta errusiera', flag: '🇧🇾', region: 'Ekialdeko Europa' },
+    { code: 'ba', name: 'Bosnia-Herzegovina', cap: 'Sarajevo', pop: '3,2 milioi biztanle', lang: 'Bosniera, serbiera eta kroaziera', flag: '🇧🇦', region: 'Hego-ekialdeko Europa' },
     { code: 'bg', name: 'Bulgaria', cap: 'Sofia', pop: '6,4 milioi biztanle', lang: 'Bulgariera', flag: '🇧🇬', region: 'Ekialdeko Europa' },
     { code: 'dk', name: 'Danimarka', cap: 'Kopenhage', pop: '5,9 milioi biztanle', lang: 'Daniera', flag: '🇩🇰', region: 'Iparraldeko Europa' },
     { code: 'gb', name: 'Erresuma Batua', cap: 'Londres', pop: '67,8 milioi biztanle', lang: 'Ingelesa', flag: '🇬🇧', region: 'Mendebaldeko Europa' },
@@ -1247,28 +1253,43 @@ const app = {
     { code: 'sk', name: 'Eslovakia', cap: 'Bratislava', pop: '5,4 milioi biztanle', lang: 'Eslovakiera', flag: '🇸🇰', region: 'Erdialdeko Europa' },
     { code: 'si', name: 'Eslovenia', cap: 'Ljubljana', pop: '2,1 milioi biztanle', lang: 'Esloveniera', flag: '🇸🇮', region: 'Hego-ekialdeko Europa' },
     { code: 'es', name: 'Espainia', cap: 'Madril', pop: '48,6 milioi biztanle', lang: 'Gaztelania (koofizialak: euskara, katalana, galiziera)', flag: '🇪🇸', region: 'Hegoaldeko Europa' },
+    { code: 'ee', name: 'Estonia', cap: 'Tallinn', pop: '1,3 milioi biztanle', lang: 'Estoniera', flag: '🇪🇪', region: 'Iparraldeko Europa (Baltikoa)' },
     { code: 'fi', name: 'Finlandia', cap: 'Helsinki', pop: '5,6 milioi biztanle', lang: 'Finlandiera eta suediera', flag: '🇫🇮', region: 'Iparraldeko Europa' },
     { code: 'fr', name: 'Frantzia', cap: 'Paris', pop: '68,4 milioi biztanle', lang: 'Frantsesa', flag: '🇫🇷', region: 'Mendebaldeko Europa' },
+    { code: 'ge', name: 'Georgia', cap: 'Tbilisi', pop: '3,7 milioi biztanle', lang: 'Georgiera', flag: '🇬🇪', region: 'Ekialdeko Europa / Kaukasoa' },
     { code: 'gr', name: 'Grezia', cap: 'Atenas', pop: '10,4 milioi biztanle', lang: 'Grekoa', flag: '🇬🇷', region: 'Hegoaldeko Europa' },
     { code: 'nl', name: 'Herbehereak', cap: 'Amsterdam', pop: '17,9 milioi biztanle', lang: 'Nederlandera', flag: '🇳🇱', region: 'Mendebaldeko Europa' },
     { code: 'hu', name: 'Hungaria', cap: 'Budapest', pop: '9,6 milioi biztanle', lang: 'Hungariera', flag: '🇭🇺', region: 'Erdialdeko Europa' },
+    { code: 'mk', name: 'Ipar Mazedonia', cap: 'Skopje', pop: '1,8 milioi biztanle', lang: 'Mazedoniera', flag: '🇲🇰', region: 'Hego-ekialdeko Europa' },
     { code: 'ie', name: 'Irlanda', cap: 'Dublin', pop: '5,3 milioi biztanle', lang: 'Irlandera eta ingelesa', flag: '🇮🇪', region: 'Mendebaldeko Europa' },
     { code: 'is', name: 'Islandia', cap: 'Reykjavik', pop: '390.000 biztanle', lang: 'Islandiera', flag: '🇮🇸', region: 'Iparraldeko Europa' },
     { code: 'it', name: 'Italia', cap: 'Erroma', pop: '58,9 milioi biztanle', lang: 'Italiera', flag: '🇮🇹', region: 'Hegoaldeko Europa' },
     { code: 'hr', name: 'Kroazia', cap: 'Zagreb', pop: '3,9 milioi biztanle', lang: 'Kroaziera', flag: '🇭🇷', region: 'Hegoaldeko Europa' },
+    { code: 'lv', name: 'Letonia', cap: 'Riga', pop: '1,9 milioi biztanle', lang: 'Letoniera', flag: '🇱🇻', region: 'Iparraldeko Europa (Baltikoa)' },
+    { code: 'li', name: 'Liechtenstein', cap: 'Vaduz', pop: '39.000 biztanle', lang: 'Alemana', flag: '🇱🇮', region: 'Erdialdeko Europa' },
+    { code: 'lt', name: 'Lituania', cap: 'Vilnius', pop: '2,8 milioi biztanle', lang: 'Lituaniera', flag: '🇱🇹', region: 'Iparraldeko Europa (Baltikoa)' },
+    { code: 'lu', name: 'Luxenburgo', cap: 'Luxenburgo', pop: '660.000 biztanle', lang: 'Luxenburgera, frantsesa eta alemana', flag: '🇱🇺', region: 'Mendebaldeko Europa' },
+    { code: 'mt', name: 'Malta', cap: 'Valletta', pop: '530.000 biztanle', lang: 'Maltera eta ingelesa', flag: '🇲🇹', region: 'Hegoaldeko Europa' },
+    { code: 'md', name: 'Moldavia', cap: 'Chisinau', pop: '2,5 milioi biztanle', lang: 'Errumaniera', flag: '🇲🇩', region: 'Ekialdeko Europa' },
+    { code: 'mc', name: 'Monako', cap: 'Monako', pop: '39.000 biztanle', lang: 'Frantsesa', flag: '🇲🇨', region: 'Mendebaldeko Europa' },
+    { code: 'me', name: 'Montenegro', cap: 'Podgorica', pop: '620.000 biztanle', lang: 'Montenegrera', flag: '🇲🇪', region: 'Hego-ekialdeko Europa' },
     { code: 'no', name: 'Norvegia', cap: 'Oslo', pop: '5,5 milioi biztanle', lang: 'Norvegiera', flag: '🇳🇴', region: 'Iparraldeko Europa' },
     { code: 'pl', name: 'Polonia', cap: 'Varsovia', pop: '36,7 milioi biztanle', lang: 'Poloniera', flag: '🇵🇱', region: 'Erdialdeko Europa' },
     { code: 'pt', name: 'Portugal', cap: 'Lisboa', pop: '10,5 milioi biztanle', lang: 'Portugesa', flag: '🇵🇹', region: 'Hegoaldeko Europa' },
-    { code: 'se', name: 'Suedia', cap: 'Estokolmo', pop: '10,5 milioi biztanle', lang: 'Suediera', flag: '🇸🇪', region: 'Iparraldeko Europa' }
+    { code: 'sm', name: 'San Marino', cap: 'San Marino', pop: '34.000 biztanle', lang: 'Italiera', flag: '🇸🇲', region: 'Hegoaldeko Europa' },
+    { code: 'rs', name: 'Serbia', cap: 'Belgrad', pop: '6,6 milioi biztanle', lang: 'Serbiera', flag: '🇷🇸', region: 'Hego-ekialdeko Europa' },
+    { code: 'se', name: 'Suedia', cap: 'Estokolmo', pop: '10,5 milioi biztanle', lang: 'Suediera', flag: '🇸🇪', region: 'Iparraldeko Europa' },
+    { code: 'ch', name: 'Suitza', cap: 'Berna', pop: '8,9 milioi biztanle', lang: 'Alemana, frantsesa, italiera eta erretorromaniera', flag: '🇨🇭', region: 'Erdialdeko Europa' },
+    { code: 'cz', name: 'Txekia', cap: 'Praga', pop: '10,8 milioi biztanle', lang: 'Txekiera', flag: '🇨🇿', region: 'Erdialdeko Europa' },
+    { code: 'tr', name: 'Turkia', cap: 'Ankara', pop: '85,3 milioi biztanle', lang: 'Turkiera', flag: '🇹🇷', region: 'Hego-ekialdeko Europa' },
+    { code: 'ua', name: 'Ukraina', cap: 'Kiev', pop: '38,0 milioi biztanle', lang: 'Ukrainera', flag: '🇺🇦', region: 'Ekialdeko Europa' },
+    { code: 'va', name: 'Vatikano Hiria', cap: 'Vatikano Hiria', pop: '800 biztanle', lang: 'Italiera eta latina', flag: '🇻🇦', region: 'Hegoaldeko Europa' },
+    { code: 'cy', name: 'Zipre', cap: 'Nikosia', pop: '1,2 milioi biztanle', lang: 'Grekoa eta turkiera', flag: '🇨🇾', region: 'Hegoaldeko Europa' }
   ],
-
-  currentQuizQuestion: null,
-  mapQuizScore: 0,
-  mapQuizTotal: 0,
 
   initMapSubtopic() {
     this.renderCountriesGrid();
-    this.renderMapQuiz();
+    this.initFlagGame();
   },
 
   switchMapTab(tab) {
@@ -1395,61 +1416,317 @@ const app = {
     if (modal) modal.classList.add('hidden');
   },
 
-  renderMapQuiz() {
-    const qEl = document.getElementById('quiz-question');
-    const optEl = document.getElementById('quiz-options');
-    const scoreEl = document.getElementById('quiz-score');
-    const feedbackEl = document.getElementById('quiz-feedback');
-    if (!qEl || !optEl) return;
+  // --------------------------------------------------------------------------
+  // JOKO BERRIA: BANDERA ETA HIRIBURUA (2 URRATSEKO ERRONKA)
+  // --------------------------------------------------------------------------
+  flagGameState: {
+    round: 1,
+    countryScore: 0,
+    capitalScore: 0,
+    currentCountry: null,
+    step: 1,
+    countryAnswered: false,
+    capitalAnswered: false,
+    userCountryChoice: null,
+    userCapitalChoice: null
+  },
 
-    if (feedbackEl) feedbackEl.classList.add('hidden');
+  initFlagGame() {
+    this.flagGameState.round = 1;
+    this.flagGameState.countryScore = 0;
+    this.flagGameState.capitalScore = 0;
+    this.startNewFlagRound();
+  },
 
+  startNewFlagRound() {
     const randomCountry = this.countriesData[Math.floor(Math.random() * this.countriesData.length)];
-    this.currentQuizQuestion = randomCountry;
+    this.flagGameState.currentCountry = randomCountry;
+    this.flagGameState.step = 1;
+    this.flagGameState.countryAnswered = false;
+    this.flagGameState.capitalAnswered = false;
+    this.flagGameState.userCountryChoice = null;
+    this.flagGameState.userCapitalChoice = null;
+    this.renderFlagGameStep1();
+  },
 
-    qEl.innerHTML = `${randomCountry.flag} Zein da <u>${randomCountry.name}</u>ko hiriburua?`;
-    if (scoreEl) scoreEl.innerText = `Puntuazioa: ${this.mapQuizScore} / ${this.mapQuizTotal}`;
+  renderFlagGameStep1() {
+    const container = document.getElementById('flag-game-container');
+    if (!container) return;
 
-    const otherCaps = this.countriesData
-      .filter(c => c.name !== randomCountry.name)
+    const country = this.flagGameState.currentCountry;
+    if (!country) return;
+
+    // Pick 3 random distractor countries
+    const otherCountries = this.countriesData
+      .filter(c => c.name !== country.name)
+      .sort(() => 0.5 - Math.random())
+      .slice(0, 3);
+    const options = [country, ...otherCountries].sort(() => 0.5 - Math.random());
+
+    container.innerHTML = `
+      <div class="flex flex-wrap items-center justify-between gap-3 border-b border-white/15 pb-4">
+        <div class="flex items-center gap-2.5">
+          <span class="w-10 h-10 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-xl shadow-md">🎮</span>
+          <div>
+            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-blue-500/30 text-blue-200 border border-blue-400/30">
+              1. URRATSA: HERRIALDEA ASMATU
+            </span>
+            <h4 class="text-base sm:text-lg font-black text-white">Bandera & Hiriburua Jokoa</h4>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm font-extrabold">
+          <span class="px-3 py-1 rounded-xl bg-white/10 text-white border border-white/10 shadow-xs">
+            🏁 Txanda: <strong class="text-yellow-300 font-black">${this.flagGameState.round}</strong>
+          </span>
+          <span class="px-3 py-1 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 shadow-xs">
+            🚩 Banderak: <strong class="text-white font-black">${this.flagGameState.countryScore}</strong>
+          </span>
+          <span class="px-3 py-1 rounded-xl bg-amber-500/20 text-amber-300 border border-amber-500/30 shadow-xs">
+            🏛️ Hiriburuak: <strong class="text-white font-black">${this.flagGameState.capitalScore}</strong>
+          </span>
+        </div>
+      </div>
+
+      <!-- BANDERA NAGUSIA -->
+      <div class="text-center space-y-4 py-2">
+        <div class="inline-block relative">
+          <div class="w-48 h-32 sm:w-60 sm:h-40 rounded-2xl overflow-hidden shadow-2xl border-4 border-white/30 bg-black/40 mx-auto transition-transform hover:scale-105">
+            <img src="images/flags/${country.code}.svg" alt="Asmatu beharreko bandera" class="w-full h-full object-cover">
+          </div>
+          <span class="absolute -bottom-2 -right-2 px-2.5 py-1 rounded-full text-[11px] font-black bg-blue-600 text-white shadow-md border border-white/40">
+            Zein da? 🤔
+          </span>
+        </div>
+
+        <div>
+          <h3 class="text-xl sm:text-2xl font-black text-white tracking-tight">
+            Zein herrialderi dagokio bandera hau?
+          </h3>
+          <p class="text-xs sm:text-sm text-blue-200/80 mt-1">
+            Hautatu Europako 49 estatuen arteko aukera zuzena:
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 AUKERAK -->
+      <div id="flag-options-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+        ${options.map(opt => `
+          <button onclick="app.checkFlagCountry('${opt.name.replace(/'/g, "\\'")}')" 
+                  class="flag-opt-btn p-4 rounded-2xl bg-white/10 hover:bg-white/20 active:scale-[0.98] border-2 border-white/15 hover:border-blue-400 text-white font-bold text-base transition-all text-left flex items-center justify-between cursor-pointer group">
+            <span class="flex items-center gap-3">
+              <span class="w-8 h-8 rounded-xl bg-white/10 flex items-center justify-center text-sm font-black text-blue-300 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                •
+              </span>
+              <span>${opt.name}</span>
+            </span>
+            <span class="opt-icon text-lg opacity-0 transition-opacity">➜</span>
+          </button>
+        `).join('')}
+      </div>
+
+      <!-- FEEDBACK & NEXT ACTION -->
+      <div id="flag-feedback-box" class="hidden space-y-3 pt-2">
+        <div id="flag-feedback-text" class="p-3.5 rounded-2xl text-center text-sm sm:text-base font-bold shadow-md"></div>
+        <div class="flex justify-end">
+          <button onclick="app.renderFlagGameStep2()" 
+                  id="btn-goto-capital"
+                  class="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-slate-950 font-black text-sm sm:text-base shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 cursor-pointer">
+            <span>2. Urratsa: Hiriburua Asmatu</span>
+            <span>➜</span>
+          </button>
+        </div>
+      </div>
+    `;
+  },
+
+  checkFlagCountry(selectedName) {
+    if (this.flagGameState.countryAnswered) return;
+    this.flagGameState.countryAnswered = true;
+    this.flagGameState.userCountryChoice = selectedName;
+
+    const country = this.flagGameState.currentCountry;
+    const isCorrect = selectedName === country.name;
+    if (isCorrect) {
+      this.flagGameState.countryScore++;
+    }
+
+    const feedbackBox = document.getElementById('flag-feedback-box');
+    const feedbackText = document.getElementById('flag-feedback-text');
+    const buttons = document.querySelectorAll('.flag-opt-btn');
+
+    buttons.forEach(btn => {
+      btn.disabled = true;
+      btn.classList.remove('hover:bg-white/20', 'hover:border-blue-400', 'cursor-pointer');
+      const text = btn.innerText;
+      if (text.includes(country.name)) {
+        btn.className = 'flag-opt-btn p-4 rounded-2xl bg-emerald-600 text-white font-black border-2 border-emerald-400 text-left flex items-center justify-between shadow-md scale-[1.01]';
+        const icon = btn.querySelector('.opt-icon');
+        if (icon) { icon.innerHTML = '✓'; icon.classList.remove('opacity-0'); }
+      } else if (text.includes(selectedName)) {
+        btn.className = 'flag-opt-btn p-4 rounded-2xl bg-rose-600 text-white font-bold border-2 border-rose-400 text-left flex items-center justify-between shadow-md';
+        const icon = btn.querySelector('.opt-icon');
+        if (icon) { icon.innerHTML = '✗'; icon.classList.remove('opacity-0'); }
+      } else {
+        btn.className = 'flag-opt-btn p-4 rounded-2xl bg-white/5 text-white/40 border-2 border-white/5 text-left flex items-center justify-between opacity-50';
+      }
+    });
+
+    if (feedbackBox && feedbackText) {
+      feedbackBox.classList.remove('hidden');
+      if (isCorrect) {
+        feedbackText.className = 'p-3.5 rounded-2xl text-center text-sm sm:text-base font-bold shadow-md bg-emerald-950/80 border-2 border-emerald-500/50 text-emerald-200';
+        feedbackText.innerHTML = `🎉 <strong>BIKAIN!</strong> Bandera hau <strong>${country.name}</strong> ${country.flag} estatuari dagokio. Orain asmatu bere hiriburua!`;
+      } else {
+        feedbackText.className = 'p-3.5 rounded-2xl text-center text-sm sm:text-base font-bold shadow-md bg-rose-950/80 border-2 border-rose-500/50 text-rose-200';
+        feedbackText.innerHTML = `❌ <strong>Ez da zuzena.</strong> Bandera hau <strong>${country.name}</strong> ${country.flag} estatuari dagokio (${selectedName}-ren ordez). Ikus dezagun bere hiriburua badakizun!`;
+      }
+    }
+  },
+
+  renderFlagGameStep2() {
+    this.flagGameState.step = 2;
+    const container = document.getElementById('flag-game-container');
+    if (!container) return;
+
+    const country = this.flagGameState.currentCountry;
+    if (!country) return;
+
+    // Pick 3 random distractor capitals
+    const otherCapitals = this.countriesData
+      .filter(c => c.cap !== country.cap)
       .map(c => c.cap)
       .sort(() => 0.5 - Math.random())
       .slice(0, 3);
+    const capOptions = [country.cap, ...otherCapitals].sort(() => 0.5 - Math.random());
 
-    const options = [randomCountry.cap, ...otherCaps].sort(() => 0.5 - Math.random());
+    container.innerHTML = `
+      <div class="flex flex-wrap items-center justify-between gap-3 border-b border-white/15 pb-4">
+        <div class="flex items-center gap-2.5">
+          <span class="w-10 h-10 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-xl shadow-md">🏛️</span>
+          <div>
+            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-amber-500/30 text-amber-200 border border-amber-400/30">
+              2. URRATSA: HIRIBURUA ASMATU
+            </span>
+            <h4 class="text-base sm:text-lg font-black text-white">Bandera & Hiriburua Jokoa</h4>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm font-extrabold">
+          <span class="px-3 py-1 rounded-xl bg-white/10 text-white border border-white/10 shadow-xs">
+            🏁 Txanda: <strong class="text-yellow-300 font-black">${this.flagGameState.round}</strong>
+          </span>
+          <span class="px-3 py-1 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 shadow-xs">
+            🚩 Banderak: <strong class="text-white font-black">${this.flagGameState.countryScore}</strong>
+          </span>
+          <span class="px-3 py-1 rounded-xl bg-amber-500/20 text-amber-300 border border-amber-500/30 shadow-xs">
+            🏛️ Hiriburuak: <strong class="text-white font-black">${this.flagGameState.capitalScore}</strong>
+          </span>
+        </div>
+      </div>
 
-    optEl.innerHTML = options.map(opt => `
-      <button onclick="app.checkMapQuiz('${opt}')" class="p-3.5 rounded-xl bg-white/10 hover:bg-white/25 border border-white/20 text-white font-bold text-base transition-all text-center">
-        ${opt}
-      </button>
-    `).join('');
+      <!-- BANDERA ETA HERRIALDEA ERREBELATUA -->
+      <div class="text-center space-y-3 py-2">
+        <div class="inline-flex items-center gap-4 px-5 py-3 rounded-2xl bg-white/10 border border-white/15 shadow-inner">
+          <div class="w-16 h-10 rounded-lg overflow-hidden border border-white/30 shadow-sm flex-shrink-0">
+            <img src="images/flags/${country.code}.svg" alt="${country.name} bandera" class="w-full h-full object-cover">
+          </div>
+          <div class="text-left">
+            <span class="text-[11px] uppercase tracking-wider text-blue-300 font-bold block">Estatu hautatua:</span>
+            <strong class="text-lg sm:text-xl font-black text-white">${country.name} ${country.flag}</strong>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xl sm:text-2xl font-black text-white tracking-tight">
+            Zein da <u class="text-amber-300">${country.name}</u>ko hiriburua?
+          </h3>
+          <p class="text-xs sm:text-sm text-amber-200/80 mt-1">
+            Aukeratu beheko 4 hiriburuen artean:
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 HIRIBURU AUKERAK -->
+      <div id="capital-options-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+        ${capOptions.map(cap => `
+          <button onclick="app.checkFlagCapital('${cap.replace(/'/g, "\\'")}')" 
+                  class="cap-opt-btn p-4 rounded-2xl bg-white/10 hover:bg-white/20 active:scale-[0.98] border-2 border-white/15 hover:border-amber-400 text-white font-bold text-base transition-all text-left flex items-center justify-between cursor-pointer group">
+            <span class="flex items-center gap-3">
+              <span class="w-8 h-8 rounded-xl bg-white/10 flex items-center justify-center text-sm font-black text-amber-300 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
+                🏛️
+              </span>
+              <span>${cap}</span>
+            </span>
+            <span class="opt-cap-icon text-lg opacity-0 transition-opacity">➜</span>
+          </button>
+        `).join('')}
+      </div>
+
+      <!-- FEEDBACK & NEXT ROUND ACTION -->
+      <div id="capital-feedback-box" class="hidden space-y-3 pt-2">
+        <div id="capital-feedback-text" class="p-3.5 rounded-2xl text-center text-sm sm:text-base font-bold shadow-md"></div>
+        <div class="flex justify-end">
+          <button onclick="app.nextFlagRound()" 
+                  id="btn-next-flag-round"
+                  class="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-black text-sm sm:text-base shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 cursor-pointer">
+            <span>Hurrengo Bandera ➜</span>
+          </button>
+        </div>
+      </div>
+    `;
   },
 
-  checkMapQuiz(selectedCap) {
-    if (!this.currentQuizQuestion) return;
-    this.mapQuizTotal++;
-    const isCorrect = selectedCap === this.currentQuizQuestion.cap;
-    if (isCorrect) this.mapQuizScore++;
+  checkFlagCapital(selectedCap) {
+    if (this.flagGameState.capitalAnswered) return;
+    this.flagGameState.capitalAnswered = true;
+    this.flagGameState.userCapitalChoice = selectedCap;
 
-    const feedbackEl = document.getElementById('quiz-feedback');
-    const scoreEl = document.getElementById('quiz-score');
-
-    if (scoreEl) scoreEl.innerText = `Puntuazioa: ${this.mapQuizScore} / ${this.mapQuizTotal}`;
-
-    if (feedbackEl) {
-      feedbackEl.classList.remove('hidden');
-      if (isCorrect) {
-        feedbackEl.className = 'text-sm font-bold text-emerald-300 p-2.5 bg-emerald-950/60 rounded-xl border border-emerald-500/40 text-center';
-        feedbackEl.innerHTML = `🎉 Bikain! ${this.currentQuizQuestion.name}ko hiriburua ${this.currentQuizQuestion.cap} da!`;
-      } else {
-        feedbackEl.className = 'text-sm font-bold text-rose-300 p-2.5 bg-rose-950/60 rounded-xl border border-rose-500/40 text-center';
-        feedbackEl.innerHTML = `❌ Ez da zuzena. ${this.currentQuizQuestion.name}ko hiriburua <u>${this.currentQuizQuestion.cap}</u> da.`;
-      }
+    const country = this.flagGameState.currentCountry;
+    const isCorrect = selectedCap === country.cap;
+    if (isCorrect) {
+      this.flagGameState.capitalScore++;
     }
 
-    setTimeout(() => {
-      this.renderMapQuiz();
-    }, 1800);
+    const feedbackBox = document.getElementById('capital-feedback-box');
+    const feedbackText = document.getElementById('capital-feedback-text');
+    const buttons = document.querySelectorAll('.cap-opt-btn');
+
+    buttons.forEach(btn => {
+      btn.disabled = true;
+      btn.classList.remove('hover:bg-white/20', 'hover:border-amber-400', 'cursor-pointer');
+      const text = btn.innerText;
+      if (text.includes(country.cap)) {
+        btn.className = 'cap-opt-btn p-4 rounded-2xl bg-emerald-600 text-white font-black border-2 border-emerald-400 text-left flex items-center justify-between shadow-md scale-[1.01]';
+        const icon = btn.querySelector('.opt-cap-icon');
+        if (icon) { icon.innerHTML = '✓'; icon.classList.remove('opacity-0'); }
+      } else if (text.includes(selectedCap)) {
+        btn.className = 'cap-opt-btn p-4 rounded-2xl bg-rose-600 text-white font-bold border-2 border-rose-400 text-left flex items-center justify-between shadow-md';
+        const icon = btn.querySelector('.opt-cap-icon');
+        if (icon) { icon.innerHTML = '✗'; icon.classList.remove('opacity-0'); }
+      } else {
+        btn.className = 'cap-opt-btn p-4 rounded-2xl bg-white/5 text-white/40 border-2 border-white/5 text-left flex items-center justify-between opacity-50';
+      }
+    });
+
+    if (feedbackBox && feedbackText) {
+      feedbackBox.classList.remove('hidden');
+      if (isCorrect) {
+        feedbackText.className = 'p-3.5 rounded-2xl text-center text-sm sm:text-base font-bold shadow-md bg-emerald-950/80 border-2 border-emerald-500/50 text-emerald-200';
+        feedbackText.innerHTML = `🎉 <strong>BIKAIN!</strong> ${country.name}ko hiriburua <strong>${country.cap}</strong> da!`;
+      } else {
+        feedbackText.className = 'p-3.5 rounded-2xl text-center text-sm sm:text-base font-bold shadow-md bg-rose-950/80 border-2 border-rose-500/50 text-rose-200';
+        feedbackText.innerHTML = `❌ <strong>Ez da zuzena.</strong> ${country.name}ko hiriburua <strong>${country.cap}</strong> da (${selectedCap}-ren ordez).`;
+      }
+    }
+  },
+
+  nextFlagRound() {
+    this.flagGameState.round++;
+    this.startNewFlagRound();
+  },
+
+  // Bateragarritasuna
+  renderMapQuiz() {
+    this.initFlagGame();
   },
 
   // --------------------------------------------------------------------------

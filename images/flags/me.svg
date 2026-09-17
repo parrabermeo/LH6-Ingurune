@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+    <rect width="600" height="400" fill="#d4a017"/>
+    <rect x="15" y="15" width="570" height="370" fill="#c40308"/>
+    <!-- Golden double-headed eagle emblem -->
+    <g transform="translate(300, 200) scale(0.85)" fill="#d4a017">
+      <path d="M-30 -50 l15 -20 l15 20 l30 -10 l-15 35 l40 10 l-35 25 l25 35 l-40 -10 l-5 35 l-20 -30 l-20 30 l-5 -35 l-40 10 l25 -35 l-35 -25 l40 -10 l-15 -35 z"/>
+      <circle cx="0" cy="0" r="18" fill="#1b4d3e" stroke="#d4a017" stroke-width="3"/>
+    </g>
+  </svg>

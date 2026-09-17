@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+    <rect width="600" height="400" fill="#ffffff"/>
+    <rect x="260" width="80" height="400" fill="#ff0000"/>
+    <rect y="160" width="600" height="80" fill="#ff0000"/>
+    <!-- 4 Small Bolnisi Crosses -->
+    <g fill="#ff0000">
+      <!-- Top Left -->
+      <path d="M125 60 h10 v40 h-10 z M110 75 h40 v10 h-40 z"/>
+      <path d="M110 65 l30 30 M140 65 l-30 30" stroke="#ff0000" stroke-width="4"/>
+      <!-- Top Right -->
+      <path d="M465 60 h10 v40 h-10 z M450 75 h40 v10 h-40 z"/>
+      <path d="M450 65 l30 30 M480 65 l-30 30" stroke="#ff0000" stroke-width="4"/>
+      <!-- Bottom Left -->
+      <path d="M125 300 h10 v40 h-10 z M110 315 h40 v10 h-40 z"/>
+      <path d="M110 305 l30 30 M140 305 l-30 30" stroke="#ff0000" stroke-width="4"/>
+      <!-- Bottom Right -->
+      <path d="M465 300 h10 v40 h-10 z M450 315 h40 v10 h-40 z"/>
+      <path d="M450 305 l30 30 M480 305 l-30 30" stroke="#ff0000" stroke-width="4"/>
+    </g>
+  </svg>

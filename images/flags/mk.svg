@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+    <rect width="600" height="400" fill="#ce2028"/>
+    <!-- 8 Rays -->
+    <polygon points="0,0 600,400 560,400 0,25" fill="#ffe600"/>
+    <polygon points="600,0 0,400 40,400 600,25" fill="#ffe600"/>
+    <polygon points="270,0 330,0 300,200" fill="#ffe600"/>
+    <polygon points="270,400 330,400 300,200" fill="#ffe600"/>
+    <polygon points="0,175 0,225 300,200" fill="#ffe600"/>
+    <polygon points="600,175 600,225 300,200" fill="#ffe600"/>
+    <!-- Sun center -->
+    <circle cx="300" cy="200" r="50" fill="#ffe600" stroke="#ce2028" stroke-width="10"/>
+  </svg>
