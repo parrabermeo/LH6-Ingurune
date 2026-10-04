@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+    <rect width="600" height="133.33" fill="#c6363c"/>
+    <rect y="133.33" width="600" height="133.34" fill="#0c4076"/>
+    <rect y="266.67" width="600" height="133.33" fill="#ffffff"/>
+    <!-- Serbian emblem in fly-left -->
+    <g transform="translate(220, 200) scale(0.7)">
+      <path d="M-45 -70 h90 v75 a45 45 0 0 1 -90 0 z" fill="#c6363c" stroke="#ffffff" stroke-width="5"/>
+      <path d="M-35 -30 h70 v40 a35 35 0 0 1 -70 0 z" fill="#ffffff"/>
+      <path d="M-20 -15 h40 v4 h-40 z M-2 -30 v40 h4 v-40 z" fill="#c6363c"/>
+      <!-- Crown -->
+      <path d="M-30 -70 l15 -20 l15 15 l15 -15 l15 20 z" fill="#ffd700"/>
+    </g>
+  </svg>

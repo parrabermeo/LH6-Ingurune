@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+    <rect width="200" height="400" fill="#10069f"/>
+    <rect x="200" width="200" height="400" fill="#fedd00"/>
+    <rect x="400" width="200" height="400" fill="#d50032"/>
+    <g transform="translate(300, 200) scale(0.65)">
+      <path d="M-50 -60 h100 v60 a50 50 0 0 1 -100 0 z" fill="#fedd00" stroke="#794400" stroke-width="6"/>
+      <path d="M0 -60 v110 M-50 -10 h100" stroke="#794400" stroke-width="4"/>
+      <text x="0" y="75" font-family="sans-serif" font-size="16" font-weight="bold" fill="#794400" text-anchor="middle">VIRTUS UNITA FORTIOR</text>
+    </g>
+  </svg>
