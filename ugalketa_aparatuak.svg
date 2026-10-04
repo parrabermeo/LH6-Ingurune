@@ -1,0 +1,234 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%" style="background:#f8fafc; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <!-- Gradienteak eta itzalak -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0fdf4"/>
+      <stop offset="50%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f0fdfa"/>
+    </linearGradient>
+    <linearGradient id="maleCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <linearGradient id="femaleCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fdf2f8"/>
+      <stop offset="100%" stop-color="#fce7f3"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.1"/>
+    </filter>
+    <filter id="badgeShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+    <!-- Geziak -->
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowPink" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#db2777"/>
+    </marker>
+  </defs>
+
+  <!-- Atzeko planoa -->
+  <rect width="1200" height="675" fill="url(#bgGrad)"/>
+  
+  <!-- Marko nagusia -->
+  <rect x="20" y="20" width="1160" height="635" rx="24" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+
+  <!-- BURUA / TITULUA -->
+  <g transform="translate(600, 48)" text-anchor="middle">
+    <rect x="-320" y="-28" width="640" height="54" rx="27" fill="#065f46" filter="url(#shadow)"/>
+    <text y="7" fill="#ffffff" font-size="24" font-weight="900" letter-spacing="1">GIZA UGALKETA APARATUAK</text>
+    <text y="50" fill="#0f766e" font-size="14" font-weight="700">LH 6. MAILA • ANATOMIA ETA ORGANOEN IZEN ZUZENAK</text>
+  </g>
+
+  <!-- ======================================================================= -->
+  <!-- EZKERREKO PANELA: GIZONEN UGALKETA APARATUA -->
+  <!-- ======================================================================= -->
+  <g transform="translate(45, 115)">
+    <!-- Txartela -->
+    <rect width="535" height="515" rx="20" fill="url(#maleCardGrad)" stroke="#93c5fd" stroke-width="2" filter="url(#shadow)"/>
+    
+    <!-- Azpititulua -->
+    <rect x="25" y="20" width="300" height="36" rx="18" fill="#1e40af"/>
+    <text x="45" y="44" fill="#ffffff" font-size="15" font-weight="800">🚹 GIZONEN UGALKETA APARATUA</text>
+
+    <!-- Ilustrazio Anatomikoa (Gizonaren Sekzio Sagitala) -->
+    <g transform="translate(40, 65)">
+      <!-- Gorputzaren profila (argi) -->
+      <path d="M 120 40 C 130 90, 140 130, 150 180 C 155 220, 160 260, 170 320 L 270 320 C 260 260, 250 200, 240 140 C 230 90, 210 50, 180 30 Z" fill="#fed7aa" opacity="0.4"/>
+      
+      <!-- Bizkarrezur / Hezur sakroa -->
+      <path d="M 230 40 C 245 90, 250 150, 240 210" stroke="#fb923c" stroke-width="8" stroke-linecap="round" fill="none"/>
+
+      <!-- Gernu-maskuria (Vejiga) -->
+      <ellipse cx="185" cy="115" rx="38" ry="32" fill="#fef08a" stroke="#ca8a04" stroke-width="3"/>
+      <text x="185" y="119" font-size="10" font-weight="bold" fill="#854d0e" text-anchor="middle">Gernu-maskuria</text>
+
+      <!-- Semen-besikula (atzean) -->
+      <ellipse cx="225" cy="130" rx="14" ry="9" fill="#c084fc" stroke="#7e22ce" stroke-width="2.5"/>
+
+      <!-- Prostata guruina -->
+      <ellipse cx="185" cy="158" rx="20" ry="15" fill="#fdba74" stroke="#c2410c" stroke-width="2.5"/>
+
+      <!-- Hodi deferentea (Ductus deferens) -->
+      <path d="M 175 285 C 195 270, 220 220, 225 180 C 230 145, 225 130, 205 155" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round"/>
+
+      <!-- Uretra (Kanal nagusia maskuriatik zakil puntaraino) -->
+      <path d="M 185 145 L 185 170 C 185 190, 165 210, 140 225 C 115 240, 95 255, 80 270" fill="none" stroke="#ef4444" stroke-width="5" stroke-linecap="round"/>
+
+      <!-- Zakila (Gorputz leizetsua eta glande) -->
+      <path d="M 160 195 C 145 210, 115 235, 95 255 C 80 270, 68 280, 80 290 C 95 295, 120 275, 140 255 C 160 235, 175 215, 185 200 Z" fill="#fca5a5" stroke="#e11d48" stroke-width="3"/>
+      <!-- Glande (Zakil burua) -->
+      <path d="M 95 255 C 80 270, 68 280, 80 290 C 90 295, 100 285, 105 275 Z" fill="#f43f5e"/>
+
+      <!-- Eskrotoa (Azal poltsa) -->
+      <ellipse cx="178" cy="285" rx="36" ry="40" fill="#fed7aa" stroke="#ea580c" stroke-width="3"/>
+
+      <!-- Barrabila (Testiculus barruan) -->
+      <ellipse cx="178" cy="285" rx="22" ry="26" fill="#60a5fa" stroke="#1d4ed8" stroke-width="3"/>
+      <text x="178" y="289" font-size="9" font-weight="bold" fill="#1e3a8a" text-anchor="middle">Barrabila</text>
+
+      <!-- SEINALE-LERROAK ETA TESTU-KAXAK (ETIKETAK) -->
+      <!-- 1. SEMEN-BESIKULA -->
+      <path d="M 235 125 L 340 95" stroke="#2563eb" stroke-width="2" marker-start="url(#arrowBlue)"/>
+      <g transform="translate(345, 75)" filter="url(#badgeShadow)">
+        <rect width="135" height="42" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+        <text x="10" y="18" font-size="12" font-weight="900" fill="#1e3a8a">Semen-besikula</text>
+        <text x="10" y="32" font-size="9" fill="#475569">Semen-likidoa sortzen du</text>
+      </g>
+
+      <!-- 2. HODI DEFERENTEAK -->
+      <path d="M 220 175 L 340 155" stroke="#2563eb" stroke-width="2" marker-start="url(#arrowBlue)"/>
+      <g transform="translate(345, 135)" filter="url(#badgeShadow)">
+        <rect width="135" height="42" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+        <text x="10" y="18" font-size="12" font-weight="900" fill="#1e3a8a">Hodi deferenteak</text>
+        <text x="10" y="32" font-size="9" fill="#475569">Espermatozoideak daramatza</text>
+      </g>
+
+      <!-- 3. BARRABILAK -->
+      <path d="M 198 295 L 340 270" stroke="#2563eb" stroke-width="2" marker-start="url(#arrowBlue)"/>
+      <g transform="translate(345, 250)" filter="url(#badgeShadow)">
+        <rect width="135" height="44" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+        <text x="10" y="18" font-size="12" font-weight="900" fill="#1e3a8a">Barrabilak</text>
+        <text x="10" y="33" font-size="9" fill="#475569">Espermatozoideak sortzen ditu</text>
+      </g>
+
+      <!-- 4. ESKROTOA -->
+      <path d="M 190 325 L 340 335" stroke="#2563eb" stroke-width="2" marker-start="url(#arrowBlue)"/>
+      <g transform="translate(345, 315)" filter="url(#badgeShadow)">
+        <rect width="135" height="42" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+        <text x="10" y="18" font-size="12" font-weight="900" fill="#1e3a8a">Eskrotoa</text>
+        <text x="10" y="32" font-size="9" fill="#475569">Barrabilak babesten dituen azala</text>
+      </g>
+
+      <!-- 5. URETRA -->
+      <path d="M 115 245 L 20 200" stroke="#2563eb" stroke-width="2" marker-start="url(#arrowBlue)"/>
+      <g transform="translate(-30, 180)" filter="url(#badgeShadow)">
+        <rect width="130" height="42" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+        <text x="10" y="18" font-size="12" font-weight="900" fill="#1e3a8a">Uretra</text>
+        <text x="10" y="32" font-size="9" fill="#475569">Gernua eta semena irteteko</text>
+      </g>
+
+      <!-- 6. ZAKILA -->
+      <path d="M 85 285 L 20 300" stroke="#2563eb" stroke-width="2" marker-start="url(#arrowBlue)"/>
+      <g transform="translate(-30, 280)" filter="url(#badgeShadow)">
+        <rect width="130" height="42" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+        <text x="10" y="18" font-size="12" font-weight="900" fill="#1e3a8a">Zakila</text>
+        <text x="10" y="32" font-size="9" fill="#475569">Kanpoko organoa (uretraduna)</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ======================================================================= -->
+  <!-- ESKUINEKO PANELA: EMAKUMEEN UGALKETA APARATUA -->
+  <!-- ======================================================================= -->
+  <g transform="translate(620, 115)">
+    <!-- Txartela -->
+    <rect width="535" height="515" rx="20" fill="url(#femaleCardGrad)" stroke="#f472b6" stroke-width="2" filter="url(#shadow)"/>
+    
+    <!-- Azpititulua -->
+    <rect x="25" y="20" width="310" height="36" rx="18" fill="#9d174d"/>
+    <text x="45" y="44" fill="#ffffff" font-size="15" font-weight="800">🚺 EMAKUMEEN UGALKETA APARATUA</text>
+
+    <!-- Ilustrazio Anatomikoa (Emakumearen Aurreko Ikuspegia) -->
+    <g transform="translate(60, 70)">
+      <!-- UMETOKIA (Útero / Matriz) -->
+      <!-- Muskulu-horma kanpokoa -->
+      <path d="M 160 140 C 130 140, 140 210, 170 240 L 170 270 L 230 270 L 230 240 C 260 210, 270 140, 240 140 Z" fill="#f472b6" stroke="#db2777" stroke-width="4"/>
+      
+      <!-- Barruko barrunbe hutsa (Endometrioa) -->
+      <path d="M 175 155 C 160 160, 165 200, 185 225 L 185 255 L 215 255 L 215 225 C 235 200, 240 160, 225 155 Z" fill="#fdf2f8" stroke="#be185d" stroke-width="2"/>
+      <text x="200" y="195" font-size="11" font-weight="900" fill="#9d174d" text-anchor="middle">Umetokia</text>
+
+      <!-- FALOPIOREN TRONPAK (Bi hodiak) -->
+      <!-- Ezkerreko tronpa -->
+      <path d="M 160 145 C 120 120, 90 110, 60 130 C 50 137, 45 150, 48 160" fill="none" stroke="#db2777" stroke-width="9" stroke-linecap="round"/>
+      <path d="M 160 145 C 120 120, 90 110, 60 130 C 50 137, 45 150, 48 160" fill="none" stroke="#fbcfe8" stroke-width="4" stroke-linecap="round"/>
+      <!-- Finbriak (Tronparen ahoa) -->
+      <path d="M 45 155 Q 35 165 45 175 M 50 155 Q 40 170 52 178 M 55 158 Q 50 175 60 176" stroke="#db2777" stroke-width="3" stroke-linecap="round"/>
+
+      <!-- Eskuineko tronpa -->
+      <path d="M 240 145 C 280 120, 310 110, 340 130 C 350 137, 355 150, 352 160" fill="none" stroke="#db2777" stroke-width="9" stroke-linecap="round"/>
+      <path d="M 240 145 C 280 120, 310 110, 340 130 C 350 137, 355 150, 352 160" fill="none" stroke="#fbcfe8" stroke-width="4" stroke-linecap="round"/>
+      <!-- Finbriak -->
+      <path d="M 355 155 Q 365 165 355 175 M 350 155 Q 360 170 348 178 M 345 158 Q 350 175 340 176" stroke="#db2777" stroke-width="3" stroke-linecap="round"/>
+
+      <!-- OBARIOAK (Arbendol itxurako bi organoak) -->
+      <!-- Ezkerreko obarioa -->
+      <ellipse cx="68" cy="180" rx="22" ry="16" fill="#fde047" stroke="#ca8a04" stroke-width="3"/>
+      <!-- Eskuineko obarioa -->
+      <ellipse cx="332" cy="180" rx="22" ry="16" fill="#fde047" stroke="#ca8a04" stroke-width="3"/>
+      <text x="68" y="184" font-size="9" font-weight="900" fill="#713f12" text-anchor="middle">Obarioa</text>
+      <text x="332" y="184" font-size="9" font-weight="900" fill="#713f12" text-anchor="middle">Obarioa</text>
+
+      <!-- BAGINA (Hodi elastikoa) -->
+      <path d="M 175 270 L 175 345 C 175 355, 185 365, 200 365 C 215 365, 225 355, 225 345 L 225 270 Z" fill="#f43f5e" stroke="#be123c" stroke-width="3"/>
+      <path d="M 185 270 L 185 345 M 215 270 L 215 345" stroke="#fecdd3" stroke-width="2" stroke-dasharray="4,4"/>
+
+      <!-- BULBA (Kanpoko tolesturak) -->
+      <ellipse cx="200" cy="370" rx="35" ry="16" fill="#fda4af" stroke="#e11d48" stroke-width="2.5"/>
+
+      <!-- SEINALE-LERROAK ETA TESTU-KAXAK (ETIKETAK) -->
+      <!-- 1. FALOPIOREN TRONPAK -->
+      <path d="M 100 120 L 20 80" stroke="#db2777" stroke-width="2" marker-start="url(#arrowPink)"/>
+      <g transform="translate(-40, 50)" filter="url(#badgeShadow)">
+        <rect width="150" height="42" rx="10" fill="#ffffff" stroke="#db2777" stroke-width="2"/>
+        <text x="10" y="18" font-size="12" font-weight="900" fill="#9d174d">Falopioren tronpak</text>
+        <text x="10" y="32" font-size="9" fill="#475569">Ernalketa gertatzen den lekua</text>
+      </g>
+
+      <!-- 2. OBARIOAK -->
+      <path d="M 48 185 L -20 185" stroke="#db2777" stroke-width="2" marker-start="url(#arrowPink)"/>
+      <g transform="translate(-40, 160)" filter="url(#badgeShadow)">
+        <rect width="140" height="42" rx="10" fill="#ffffff" stroke="#db2777" stroke-width="2"/>
+        <text x="10" y="18" font-size="12" font-weight="900" fill="#9d174d">Obarioak (Obulutegiak)</text>
+        <text x="10" y="32" font-size="9" fill="#475569">Obuluak sortu eta heltzen dira</text>
+      </g>
+
+      <!-- 3. UMETOKIA (MATRIZEA) -->
+      <path d="M 235 180 L 320 80" stroke="#db2777" stroke-width="2" marker-start="url(#arrowPink)"/>
+      <g transform="translate(305, 50)" filter="url(#badgeShadow)">
+        <rect width="145" height="42" rx="10" fill="#ffffff" stroke="#db2777" stroke-width="2"/>
+        <text x="10" y="18" font-size="12" font-weight="900" fill="#9d174d">Umetokia (Matrizea)</text>
+        <text x="10" y="32" font-size="9" fill="#475569">Haurtxoa bertan garatzen da</text>
+      </g>
+
+      <!-- 4. BAGINA -->
+      <path d="M 225 310 L 320 280" stroke="#db2777" stroke-width="2" marker-start="url(#arrowPink)"/>
+      <g transform="translate(305, 260)" filter="url(#badgeShadow)">
+        <rect width="145" height="42" rx="10" fill="#ffffff" stroke="#db2777" stroke-width="2"/>
+        <text x="10" y="18" font-size="12" font-weight="900" fill="#9d174d">Bagina</text>
+        <text x="10" y="32" font-size="9" fill="#475569">Umetokia kanpoarekin lotzen du</text>
+      </g>
+
+      <!-- 5. BULBA (ALUA) -->
+      <path d="M 225 370 L 320 360" stroke="#db2777" stroke-width="2" marker-start="url(#arrowPink)"/>
+      <g transform="translate(305, 340)" filter="url(#badgeShadow)">
+        <rect width="145" height="42" rx="10" fill="#ffffff" stroke="#db2777" stroke-width="2"/>
+        <text x="10" y="18" font-size="12" font-weight="900" fill="#9d174d">Bulba (Alua)</text>
+        <text x="10" y="32" font-size="9" fill="#475569">Kanpoko tolestura babesleak</text>
+      </g>
+    </g>
+  </g>
+</svg>

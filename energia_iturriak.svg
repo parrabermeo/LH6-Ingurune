@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%" style="background:#0f172a; font-family: system-ui, -apple-system, sans-serif;">
+  <defs>
+    <linearGradient id="greenPanel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#022c22"/>
+    </linearGradient>
+    <linearGradient id="darkPanel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#451a03"/>
+      <stop offset="100%" stop-color="#1c1917"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="#090d16"/>
+  <rect x="25" y="25" width="1150" height="625" rx="28" fill="none" stroke="#334155" stroke-width="2"/>
+
+  <!-- BURUA -->
+  <g transform="translate(600, 50)" text-anchor="middle">
+    <rect x="-360" y="-28" width="720" height="56" rx="28" fill="#2563eb"/>
+    <text y="9" fill="#ffffff" font-size="23" font-weight="900" letter-spacing="1">🌍 ENERGIA ITURRIAK: NONDIK DATOR?</text>
+    <text y="50" fill="#93c5fd" font-size="14" font-weight="700">BERRIZTAGARRIAK (GARBIAK) VS BERRIZTAEZINAK (FOSILAK ETA ARRISKUTSUAK)</text>
+  </g>
+
+  <!-- EZKERRA: BERRIZTAGARRIAK (BERDEA) -->
+  <g transform="translate(55, 115)">
+    <rect width="525" height="430" rx="24" fill="url(#greenPanel)" stroke="#10b981" stroke-width="2"/>
+    <rect x="25" y="20" width="310" height="38" rx="19" fill="#059669"/>
+    <text x="45" y="45" fill="#fff" font-size="16" font-weight="900">🌱 ITURRI BERRIZTAGARRIAK</text>
+    <text x="350" y="45" fill="#6ee7b7" font-size="13" font-weight="700">EZ DIRA AGORTZEN</text>
+
+    <!-- 6 ITURRI -->
+    <g transform="translate(25, 75)" font-size="13" fill="#e2e8f0">
+      <!-- Eguzkia -->
+      <rect width="475" height="50" rx="12" fill="#065f46" stroke="#10b981" stroke-width="1"/>
+      <text x="15" y="32" font-size="20">☀️</text>
+      <text x="45" y="25" fill="#a7f3d0" font-weight="900" font-size="14">Eguzki-Energia (Fotovoltaikoa eta Termikoa)</text>
+      <text x="45" y="42" fill="#cbd5e1" font-size="12">Eguzki-erradiazioa panelen bidez elektrizitate edo ur bero bihurtzen da.</text>
+
+      <!-- Eolikoa -->
+      <g transform="translate(0, 58)">
+        <rect width="475" height="50" rx="12" fill="#065f46" stroke="#10b981" stroke-width="1"/>
+        <text x="15" y="32" font-size="20">💨</text>
+        <text x="45" y="25" fill="#a7f3d0" font-weight="900" font-size="14">Haize-Energia (Eolikoa)</text>
+        <text x="45" y="42" fill="#cbd5e1" font-size="12">Aerosorgailuen helize handiak biraraziz elektrizitatea sortzen du.</text>
+      </g>
+
+      <!-- Hidraulikoa -->
+      <g transform="translate(0, 116)">
+        <rect width="475" height="50" rx="12" fill="#065f46" stroke="#10b981" stroke-width="1"/>
+        <text x="15" y="32" font-size="20">💧</text>
+        <text x="45" y="25" fill="#a7f3d0" font-weight="900" font-size="14">Ura / Hidraulikoa</text>
+        <text x="45" y="42" fill="#cbd5e1" font-size="12">Presatutako ura altueratik erortzean turbinak mugitzen ditu.</text>
+      </g>
+
+      <!-- Biomasa / Biogasa -->
+      <g transform="translate(0, 174)">
+        <rect width="475" height="50" rx="12" fill="#065f46" stroke="#10b981" stroke-width="1"/>
+        <text x="15" y="32" font-size="20">🌿</text>
+        <text x="45" y="25" fill="#a7f3d0" font-weight="900" font-size="14">Biomasa eta Biogasa</text>
+        <text x="45" y="42" fill="#cbd5e1" font-size="12">Zabor organikoa eta hondakin biologikoak erregaian eraldatzea.</text>
+      </g>
+
+      <!-- Geotermikoa -->
+      <g transform="translate(0, 232)">
+        <rect width="475" height="50" rx="12" fill="#065f46" stroke="#10b981" stroke-width="1"/>
+        <text x="15" y="32" font-size="20">🌋</text>
+        <text x="45" y="25" fill="#a7f3d0" font-weight="900" font-size="14">Geotermikoa (Lurraren Beroa)</text>
+        <text x="45" y="42" fill="#cbd5e1" font-size="12">Lurpeko tenperatura altuak aprobetxatzen dira berotzeko.</text>
+      </g>
+
+      <!-- Itsasokoa -->
+      <g transform="translate(0, 290)">
+        <rect width="475" height="50" rx="12" fill="#065f46" stroke="#10b981" stroke-width="1"/>
+        <text x="15" y="32" font-size="20">🌊</text>
+        <text x="45" y="25" fill="#a7f3d0" font-weight="900" font-size="14">Itsasokoa: Olatuak eta Mareak</text>
+        <text x="45" y="42" fill="#cbd5e1" font-size="12">Olatuen kolpea eta itsasaldiak (Mutrikuko Olatu Zentrala).</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ESKUINA: BERRIZTAEZINAK (GARRATZA) -->
+  <g transform="translate(620, 115)">
+    <rect width="525" height="430" rx="24" fill="url(#darkPanel)" stroke="#f97316" stroke-width="2"/>
+    <rect x="25" y="20" width="320" height="38" rx="19" fill="#c2410c"/>
+    <text x="45" y="45" fill="#fff" font-size="16" font-weight="900">⚠️ ITURRI BERRIZTAEZINAK</text>
+    <text x="360" y="45" fill="#fdba74" font-size="13" font-weight="700">AGORTU EGITEN DIRA</text>
+
+    <!-- 4 ITURRI -->
+    <g transform="translate(25, 75)" font-size="13" fill="#e2e8f0">
+      <!-- Petrolioa -->
+      <rect width="475" height="72" rx="12" fill="#292524" stroke="#ea580c" stroke-width="1"/>
+      <text x="15" y="42" font-size="24">🛢️</text>
+      <text x="50" y="28" fill="#fdba74" font-weight="900" font-size="15">Petrolioa (Likido Ilun Fosila)</text>
+      <text x="50" y="47" fill="#cbd5e1" font-size="12">• Lurpeko hobietatik ateratzen da (fraking bidez askotan).</text>
+      <text x="50" y="64" fill="#cbd5e1" font-size="12">• Autoen erregaiak (gasolina, gasolioa) eta plastikoak.</text>
+
+      <!-- Gas Naturala -->
+      <g transform="translate(0, 80)">
+        <rect width="475" height="72" rx="12" fill="#292524" stroke="#ea580c" stroke-width="1"/>
+        <text x="15" y="42" font-size="24">🔥</text>
+        <text x="50" y="28" fill="#fdba74" font-weight="900" font-size="15">Gas Naturala (Metanoa)</text>
+        <text x="50" y="47" fill="#cbd5e1" font-size="12">• Bero-ahalmen handiko gasa; errekuntzan CO₂ askatzen du.</text>
+        <text x="50" y="64" fill="#cbd5e1" font-size="12">• Etxeko berogailuetan eta industrian oso erabilia.</text>
+      </g>
+
+      <!-- Ikatza -->
+      <g transform="translate(0, 160)">
+        <rect width="475" height="72" rx="12" fill="#292524" stroke="#ea580c" stroke-width="1"/>
+        <text x="15" y="42" font-size="24">⛏️</text>
+        <text x="50" y="28" fill="#fdba74" font-weight="900" font-size="15">Ikatza (Harri Beltz Fosila)</text>
+        <text x="50" y="47" fill="#cbd5e1" font-size="12">• Meatzaritzaren bidez ateratako harri erregai oso kutsagarria.</text>
+        <text x="50" y="64" fill="#cbd5e1" font-size="12">• Zentral termikoetan elektrizitatea sortzeko erabilia.</text>
+      </g>
+
+      <!-- Nuklearra -->
+      <g transform="translate(0, 240)">
+        <rect width="475" height="72" rx="12" fill="#292524" stroke="#ea580c" stroke-width="1"/>
+        <text x="15" y="42" font-size="24">☢️</text>
+        <text x="50" y="28" fill="#fdba74" font-weight="900" font-size="15">Energia Nuklearra (Uranioa)</text>
+        <text x="50" y="47" fill="#cbd5e1" font-size="12">• Atomoen fisioak bero ikaragarria sortzen du.</text>
+        <text x="50" y="64" fill="#cbd5e1" font-size="12">• Hondakin erradioaktiboak eta istripu larriak (Txernobil, Fukushima).</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- BEHEKO DATUA: EUSKAL HERRIA -->
+  <g transform="translate(55, 560)">
+    <rect width="1090" height="68" rx="16" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+    <text x="25" y="40" font-size="24">📊</text>
+    <text x="65" y="32" fill="#ffffff" font-size="15" font-weight="800">EUSKAL HERRIKO KONTSUMOA (2023):</text>
+    <text x="65" y="52" fill="#f87171" font-size="14" font-weight="900">%86 Berriztaezina (Petrolioa eta Gasa) <tspan fill="#4ade80">vs %14 Berriztagarria soilik!</tspan></text>
+    <text x="750" y="41" fill="#93c5fd" font-size="13" font-weight="700">Erronka: Kontsumoa murriztu eta trantsizio garbia egin!</text>
+  </g>
+</svg>
