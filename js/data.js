@@ -99,7 +99,7 @@ const SUBTOPICS_DATA = {
           </div>
         </div>
 
-        <h3 class="text-xl sm:text-2xl font-black font-title text-gray-900 mt-6">🌤️ Europako 5 Klima Nagusiak (Arakatu Klik Eginez):</h3>
+        <h3 class="clima-interactivo-titulo text-xl sm:text-2xl font-black font-title text-gray-900 mt-6">🌤️ Europako 5 Klima Nagusiak (Arakatu Klik Eginez):</h3>
         
         <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 my-4">
           <button onclick="app.selectClimate('atlantikoa')" class="climate-tab-btn p-3 rounded-2xl bg-blue-600 text-white font-bold text-sm text-center shadow-sm" data-climate="atlantikoa">🌧️ Atlantikoa</button>
@@ -117,7 +117,7 @@ const SUBTOPICS_DATA = {
             </p>
           </div>
           <div class="h-36 rounded-xl overflow-hidden border border-blue-200">
-            <img id="climate-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&auto=format&fit=crop&q=80" alt="Klima Atlantikoa" class="w-full h-full object-cover">
+            <img id="climate-img" src="images/klima_ozeanikoa.jpg" alt="Klima Atlantikoa" class="w-full h-full object-cover">
           </div>
         </div>
 
@@ -144,7 +144,7 @@ const SUBTOPICS_DATA = {
     code: '1.3',
     title: '1.3 Europako Mapak: Politikoa eta Fisikoa',
     lead: 'Europako herrialdeak eta haien hiriburuak, ibai luzeenak, itsasoak eta mendikate garaienak.',
-    image: 'images/mapa_politiko_fisikoa.jpg',
+    image: 'images/mapa_fisikoa.jpg',
     videoUrl: 'https://www.youtube.com/watch?v=7bbpTGBfBPA',
     videoTitle: 'Europako herrialdeak eta hiriburuak (Lehen Hezkuntza)',
     videoAuthor: 'maisumikelhezkuntza',
@@ -190,10 +190,10 @@ const SUBTOPICS_DATA = {
         </div>
 
         <!-- EDUKI FISIKOA -->
-        <div id="map-content-fisikoa" class="space-y-6 hidden">
+        <div id="map-content-fisikoa" class="ibaiak-section bloque-ibaiak space-y-6 hidden">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-base">
             <!-- IBAIAK -->
-            <div class="p-5 bg-sky-50 rounded-2xl border border-sky-200 space-y-3">
+            <div id="ibaiak-container" class="bloque-ibaiak p-5 bg-sky-50 rounded-2xl border border-sky-200 space-y-3">
               <h4 class="text-lg font-black text-sky-950 flex items-center gap-2">
                 <span>🌊</span> <span>Europako Ibai Nagusiak</span>
               </h4>
@@ -727,7 +727,7 @@ const SUBTOPICS_DATA = {
         </div>
 
         <!-- DEMOGRAFIA ARIKETA FORMULAK -->
-        <div class="p-5 bg-blue-50/80 rounded-2xl border border-blue-200 text-sm sm:text-base space-y-2">
+        <div class="demografia-eragiketak fitxako-ariketa p-5 bg-blue-50/80 rounded-2xl border border-blue-200 text-sm sm:text-base space-y-2">
           <h4 class="font-bold text-blue-950">📊 Demografia Eragiketak (Fitxako Ariketa):</h4>
           <p class="text-gray-700">
             Lurralde bateko biztanleriaren aldaketa zehatza kalkulatzeko bi saldoak erabiltzen dira:
@@ -893,7 +893,7 @@ const SUBTOPICS_DATA = {
         </div>
 
         <h3 class="text-xl sm:text-2xl font-black font-title text-gray-900 mt-8">🧩 Zelularen 4 Zati Nagusiak:</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 my-4 text-base">
+        <div class="grid-zelula-zatiak grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 my-4 text-base">
           <div class="p-5 bg-white rounded-2xl border border-emerald-200 shadow-sm space-y-1.5">
             <strong class="text-emerald-900 font-bold block text-lg">🛡️ MINTZA</strong>
             <p class="text-gray-600">Zelula eta kanpoaldea bereizten du. Substantzien sarrera eta irteera kontrolatzen du.</p>
@@ -912,34 +912,36 @@ const SUBTOPICS_DATA = {
           </div>
         </div>
 
-        <h3 class="text-xl sm:text-2xl font-black font-title text-gray-900 mt-8">⚖️ Animalien Zelulak vs Landareen Zelulak:</h3>
-        <div class="overflow-x-auto my-4">
-          <table class="w-full text-left border-collapse rounded-2xl overflow-hidden shadow-sm text-base">
-            <thead>
-              <tr class="bg-emerald-700 text-white font-bold">
-                <th class="p-4 w-1/2">🐾 ANIMALIEN ZELULAK</th>
-                <th class="p-4 w-1/2">🌿 LANDAREEN ZELULAK</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-emerald-100 bg-white">
-              <tr class="hover:bg-emerald-50/50">
-                <td class="p-4 text-gray-700">• Forma askotakoak: batzuk irregularrak eta baita erregularrak ere.</td>
-                <td class="p-4 text-gray-700">• Handiagoak izaten dira eta forma erregularra dute, gehienek prisma forma.</td>
-              </tr>
-              <tr class="hover:bg-emerald-50/50">
-                <td class="p-4 text-gray-700">• Txikiagoak dira tamainaz.</td>
-                <td class="p-4 text-gray-700">• <span class="kw-term kw-emerald">Zelula-pareta</span> sendoa dute mintzaren kanpoko aldetik, zelulosazkoa.</td>
-              </tr>
-              <tr class="hover:bg-emerald-50/50">
-                <td class="p-4 text-gray-700">• Ez dute kloroplastorik; heterotrofoak dira (beste bizidunetatik elikatu).</td>
-                <td class="p-4 text-gray-700">• <span class="kw-term kw-emerald">Kloroplastoak</span> dituzte: klorofila dute fotosintesia egiteko eta elikagaia sortzeko.</td>
-              </tr>
-              <tr class="hover:bg-emerald-50/50">
-                <td class="p-4 text-gray-700">• Bakuolo txikiak eta ugariak izan ohi dituzte.</td>
-                <td class="p-4 text-gray-700">• <span class="kw-term kw-emerald">Bakuolo handi</span> bakarra dute, ura eta erreserbak biltzeko.</td>
-              </tr>
-            </tbody>
-          </table>
+        <div id="animal-plant-cells" class="zelula-konparaketa zelula-konparaketa-wrapper animalien-zelulak-vs-container comparativa-celulas">
+          <h3 class="zelula-konparaketa-title text-xl sm:text-2xl font-black font-title text-gray-900 mt-8">⚖️ Animalien Zelulak vs Landareen Zelulak:</h3>
+          <div class="zelula-konparaketa-box overflow-x-auto my-4">
+            <table class="w-full text-left border-collapse rounded-2xl overflow-hidden shadow-sm text-base">
+              <thead>
+                <tr class="bg-emerald-700 text-white font-bold">
+                  <th class="p-4 w-1/2">🐾 ANIMALIEN ZELULAK</th>
+                  <th class="p-4 w-1/2">🌿 LANDAREEN ZELULAK</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-emerald-100 bg-white">
+                <tr class="hover:bg-emerald-50/50">
+                  <td class="p-4 text-gray-700">• Forma askotakoak: batzuk irregularrak eta baita erregularrak ere.</td>
+                  <td class="p-4 text-gray-700">• Handiagoak izaten dira eta forma erregularra dute, gehienek prisma forma.</td>
+                </tr>
+                <tr class="hover:bg-emerald-50/50">
+                  <td class="p-4 text-gray-700">• Txikiagoak dira tamainaz.</td>
+                  <td class="p-4 text-gray-700">• <span class="kw-term kw-emerald">Zelula-pareta</span> sendoa dute mintzaren kanpoko aldetik, zelulosazkoa.</td>
+                </tr>
+                <tr class="hover:bg-emerald-50/50">
+                  <td class="p-4 text-gray-700">• Ez dute kloroplastorik; heterotrofoak dira (beste bizidunetatik elikatu).</td>
+                  <td class="p-4 text-gray-700">• <span class="kw-term kw-emerald">Kloroplastoak</span> dituzte: klorofila dute fotosintesia egiteko eta elikagaia sortzeko.</td>
+                </tr>
+                <tr class="hover:bg-emerald-50/50">
+                  <td class="p-4 text-gray-700">• Bakuolo txikiak eta ugariak izan ohi dituzte.</td>
+                  <td class="p-4 text-gray-700">• <span class="kw-term kw-emerald">Bakuolo handi</span> bakarra dute, ura eta erreserbak biltzeko.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     `,
@@ -1094,7 +1096,7 @@ const SUBTOPICS_DATA = {
         </div>
 
         <!-- ARIKETA INTERAKTIBOA: APARATUAK LOTU -->
-        <div id="organ-quiz-container" class="g-card rounded-[28px] p-6 sm:p-8 bg-emerald-900 text-white shadow-xl space-y-4 my-8">
+        <div id="organ-quiz-container" class="ariketa-azkarra quiz-quick quiz g-card rounded-[28px] p-6 sm:p-8 bg-emerald-900 text-white shadow-xl space-y-4 my-8">
           <div class="flex items-center gap-3">
             <span class="text-3xl">🎯</span>
             <div>
@@ -1269,8 +1271,8 @@ const SUBTOPICS_DATA = {
           </div>
         </div>
 
-        <h3 class="text-xl sm:text-2xl font-black font-title text-gray-900 mt-8">🔄 Estimulutik Erantzunera: 4 Urratsen Zirkuitua</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 my-4 text-base">
+        <h3 class="urratsen-zirkuitua-title text-xl sm:text-2xl font-black font-title text-gray-900 mt-8">🔄 Estimulutik Erantzunera: 4 Urratsen Zirkuitua</h3>
+        <div class="zirkuitua-grid urratsen-zirkuitua circuito-pasos grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 my-4 text-base">
           <div class="p-5 bg-white rounded-2xl border border-emerald-200 shadow-sm space-y-2">
             <div class="text-2xl font-black text-emerald-600">1️⃣</div>
             <strong class="text-gray-900 block font-bold">Estimulua Jaso</strong>
@@ -1422,8 +1424,8 @@ const SUBTOPICS_DATA = {
           </div>
 
           <!-- EMAKUMEEN APARATUA -->
-          <div class="p-6 bg-teal-50/70 rounded-3xl border-2 border-teal-200 space-y-4">
-            <h4 class="text-2xl font-black text-teal-950 flex items-center gap-2">
+          <div class="emakumeen-ugalketa-aparatua p-6 bg-teal-50/70 rounded-3xl border-2 border-teal-200 space-y-4">
+            <h4 class="emakumeen-aparatua-title text-2xl font-black text-teal-950 flex items-center gap-2">
               <span>🚺</span> Emakumeen Ugalketa Aparatua
             </h4>
             <div class="space-y-3 text-sm sm:text-base">
@@ -1671,7 +1673,7 @@ const SUBTOPICS_DATA = {
         </div>
 
         <!-- 2. GAIAREN AUTOEBALUAZIO GALDETEGI NAGUSIA -->
-        <div id="theme2-master-quiz" class="g-card rounded-[32px] p-6 sm:p-8 bg-gradient-to-br from-emerald-900 via-emerald-800 to-teal-900 text-white shadow-2xl space-y-6 my-10">
+        <div id="theme2-master-quiz" class="ebaluazioa-section master-quiz quiz g-card rounded-[32px] p-6 sm:p-8 bg-gradient-to-br from-emerald-900 via-emerald-800 to-teal-900 text-white shadow-2xl space-y-6 my-10">
           <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-emerald-700/60 pb-5">
             <div class="flex items-center gap-3">
               <span class="text-4xl">🏆</span>
@@ -1872,9 +1874,9 @@ const SUBTOPICS_DATA = {
           Nahiz eta energia begiekin zuzenean ikustezina izan, hark sortutako <span class="kw-term kw-amber">aldaketak ikustean</span> energiak eragina izan duela jakin dezakegu. Zientzialariek energiaren lau ezaugarri edo propietate nagusi bereizi dituzte:
         </p>
 
-        <div class="flex flex-col gap-4 my-6 text-base sm:text-lg">
+        <div class="energia-propietateak-zerrenda flex flex-col gap-4 my-6 text-base sm:text-lg">
           <!-- 1. METATU -->
-          <div class="p-6 bg-amber-50/80 rounded-3xl border-2 border-amber-200 hover:border-amber-300 transition-all flex flex-col sm:flex-row items-start gap-4 shadow-sm">
+          <div class="energia-propietate-kaxa p-6 bg-amber-50/80 rounded-3xl border-2 border-amber-200 hover:border-amber-300 transition-all flex flex-col sm:flex-row items-start gap-4 shadow-sm">
             <div class="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-xl font-black shadow-md flex-shrink-0">1</div>
             <div class="space-y-2 flex-1">
               <h4 class="text-xl font-black text-amber-950 flex items-center gap-2">
@@ -1890,7 +1892,7 @@ const SUBTOPICS_DATA = {
           </div>
 
           <!-- 2. GARRAIATU -->
-          <div class="p-6 bg-amber-50/80 rounded-3xl border-2 border-amber-200 hover:border-amber-300 transition-all flex flex-col sm:flex-row items-start gap-4 shadow-sm">
+          <div class="energia-propietate-kaxa p-6 bg-amber-50/80 rounded-3xl border-2 border-amber-200 hover:border-amber-300 transition-all flex flex-col sm:flex-row items-start gap-4 shadow-sm">
             <div class="w-12 h-12 rounded-2xl bg-purple-600 text-white flex items-center justify-center text-xl font-black shadow-md flex-shrink-0">2</div>
             <div class="space-y-2 flex-1">
               <h4 class="text-xl font-black text-amber-950 flex items-center gap-2">
@@ -1906,7 +1908,7 @@ const SUBTOPICS_DATA = {
           </div>
 
           <!-- 3. ERALDATU -->
-          <div class="p-6 bg-amber-50/80 rounded-3xl border-2 border-amber-200 hover:border-amber-300 transition-all flex flex-col sm:flex-row items-start gap-4 shadow-sm">
+          <div class="energia-propietate-kaxa p-6 bg-amber-50/80 rounded-3xl border-2 border-amber-200 hover:border-amber-300 transition-all flex flex-col sm:flex-row items-start gap-4 shadow-sm">
             <div class="w-12 h-12 rounded-2xl bg-amber-600 text-white flex items-center justify-center text-xl font-black shadow-md flex-shrink-0">3</div>
             <div class="space-y-2 flex-1">
               <h4 class="text-xl font-black text-amber-950 flex items-center gap-2">
@@ -1922,7 +1924,7 @@ const SUBTOPICS_DATA = {
           </div>
 
           <!-- 4. TRANSFERITU -->
-          <div class="p-6 bg-amber-50/80 rounded-3xl border-2 border-amber-200 hover:border-amber-300 transition-all flex flex-col sm:flex-row items-start gap-4 shadow-sm">
+          <div class="energia-propietate-kaxa p-6 bg-amber-50/80 rounded-3xl border-2 border-amber-200 hover:border-amber-300 transition-all flex flex-col sm:flex-row items-start gap-4 shadow-sm">
             <div class="w-12 h-12 rounded-2xl bg-red-600 text-white flex items-center justify-center text-xl font-black shadow-md flex-shrink-0">4</div>
             <div class="space-y-2 flex-1">
               <h4 class="text-xl font-black text-amber-950 flex items-center gap-2">
@@ -1939,7 +1941,7 @@ const SUBTOPICS_DATA = {
         </div>
 
         <!-- PRINTZIPIO NAGUSIA ETA DEGRADAZIOA -->
-        <div class="p-8 bg-gradient-to-r from-amber-500/15 via-orange-500/10 to-amber-500/15 rounded-3xl border-2 border-amber-400 space-y-4">
+        <div class="energia-kontserbazioa-blokea p-8 bg-gradient-to-r from-amber-500/15 via-orange-500/10 to-amber-500/15 rounded-3xl border-2 border-amber-400 space-y-4">
           <h4 class="text-2xl font-black text-amber-950 flex items-center gap-2">
             <span>⚖️</span> Fisikaren Lege Unibertsala: Energiaren Kontserbazioa
           </h4>
@@ -2048,7 +2050,7 @@ const SUBTOPICS_DATA = {
         </div>
 
         <!-- GRAFIKO ZIRKULARRA: KONTTSUMITUTAKO ENERGIA BERRIZTAGARRIA (%14) ETA EZ-BERRIZTAGARRIA (%84) -->
-        <div class="p-6 sm:p-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white rounded-[32px] border-2 border-amber-400/40 shadow-2xl space-y-6 my-8">
+        <div id="grafiko-kutxa" class="trantsizio-datuak energia-portzentajeak p-6 sm:p-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white rounded-[32px] border-2 border-amber-400/40 shadow-2xl space-y-6 my-8">
           <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-700/80 pb-4">
             <div class="flex items-center gap-3">
               <span class="text-3xl sm:text-4xl">📊</span>
@@ -2217,7 +2219,7 @@ const SUBTOPICS_DATA = {
         </div>
 
         <!-- SIMULAGAILU INTERAKTIBOA -->
-        <div class="p-6 bg-slate-900 text-white rounded-[28px] space-y-6 shadow-xl my-6">
+        <div id="circuito-interactivo" class="simulador-bombillas simulador-container p-6 bg-slate-900 text-white rounded-[28px] space-y-6 shadow-xl my-6">
           <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-4">
             <div>
               <h4 class="text-xl font-black text-amber-400">🔌 Zirkuitu Birtualen Laborategia: Seriea vs Paraleloa</h4>
@@ -2259,7 +2261,7 @@ const SUBTOPICS_DATA = {
         </div>
 
         <!-- GALDERA / ERRONKA AZKARRA -->
-        <div class="p-6 bg-gradient-to-r from-amber-950 via-orange-950 to-slate-950 text-white rounded-3xl border-2 border-amber-500/40 shadow-xl space-y-3 my-6">
+        <div id="circuit-quick-challenge" class="zirkuitu-galdera-interaktiboa p-6 bg-gradient-to-r from-amber-950 via-orange-950 to-slate-950 text-white rounded-3xl border-2 border-amber-500/40 shadow-xl space-y-3 my-6">
           <div class="flex items-center justify-between">
             <span class="px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-amber-500/30 text-amber-200 border border-amber-400/30">
               ⚡ ERRONKA AZKARRA
@@ -2309,9 +2311,9 @@ const SUBTOPICS_DATA = {
           Edozein zirkuitu elektrikok, sinpleena edo konplexuena izan, lau osagai-multzo nagusi behar ditu funtzionatzeko. Jarraian, haien deskribapena eta plano teknikoetan erabiltzen diren <span class="kw-term kw-amber">nazioarteko sinbolo estandarizatuak</span> aztertuko ditugu:
         </p>
 
-        <div class="flex flex-col gap-4 my-6 text-base sm:text-lg">
+        <div id="componentes-circuito" class="osagaiak-zerrenda osagaiak-container flex flex-col gap-4 my-6 text-base sm:text-lg">
           <!-- 1. SORGAILUAK -->
-          <div class="p-6 bg-amber-50/80 rounded-3xl border-2 border-amber-200 hover:border-amber-300 transition-all flex flex-col sm:flex-row items-start gap-4 shadow-sm">
+          <div class="osagai-kaxa osagai-sorgailuak p-6 bg-amber-50/80 rounded-3xl border-2 border-amber-200 hover:border-amber-300 transition-all flex flex-col sm:flex-row items-start gap-4 shadow-sm">
             <div class="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-xl font-black shadow-md flex-shrink-0">1</div>
             <div class="space-y-2 flex-1">
               <div class="flex items-center justify-between flex-wrap gap-2">
@@ -2343,7 +2345,7 @@ const SUBTOPICS_DATA = {
           </div>
 
           <!-- 2. HARTZAILEAK -->
-          <div class="p-6 bg-amber-50/80 rounded-3xl border-2 border-amber-200 hover:border-amber-300 transition-all flex flex-col sm:flex-row items-start gap-4 shadow-sm">
+          <div class="osagai-kaxa osagai-hartzaileak p-6 bg-amber-50/80 rounded-3xl border-2 border-amber-200 hover:border-amber-300 transition-all flex flex-col sm:flex-row items-start gap-4 shadow-sm">
             <div class="w-12 h-12 rounded-2xl bg-amber-600 text-white flex items-center justify-center text-xl font-black shadow-md flex-shrink-0">2</div>
             <div class="space-y-2 flex-1">
               <div class="flex items-center justify-between flex-wrap gap-2">
@@ -2375,7 +2377,7 @@ const SUBTOPICS_DATA = {
           </div>
 
           <!-- 3. KONTROL ELEMENTUAK -->
-          <div class="p-6 bg-amber-50/80 rounded-3xl border-2 border-amber-200 hover:border-amber-300 transition-all flex flex-col sm:flex-row items-start gap-4 shadow-sm">
+          <div class="osagai-kaxa osagai-kontrol p-6 bg-amber-50/80 rounded-3xl border-2 border-amber-200 hover:border-amber-300 transition-all flex flex-col sm:flex-row items-start gap-4 shadow-sm">
             <div class="w-12 h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center text-xl font-black shadow-md flex-shrink-0">3</div>
             <div class="space-y-2 flex-1">
               <div class="flex items-center justify-between flex-wrap gap-2">
@@ -2401,7 +2403,7 @@ const SUBTOPICS_DATA = {
           </div>
 
           <!-- 4. EROALEAK -->
-          <div class="p-6 bg-amber-50/80 rounded-3xl border-2 border-amber-200 hover:border-amber-300 transition-all flex flex-col sm:flex-row items-start gap-4 shadow-sm">
+          <div class="osagai-kaxa osagai-eroaleak p-6 bg-amber-50/80 rounded-3xl border-2 border-amber-200 hover:border-amber-300 transition-all flex flex-col sm:flex-row items-start gap-4 shadow-sm">
             <div class="w-12 h-12 rounded-2xl bg-pink-600 text-white flex items-center justify-center text-xl font-black shadow-md flex-shrink-0">4</div>
             <div class="space-y-2 flex-1">
               <div class="flex items-center justify-between flex-wrap gap-2">
@@ -2423,7 +2425,7 @@ const SUBTOPICS_DATA = {
         </div>
 
         <!-- SINBOLO ESTANDARREN GARRANTZIA -->
-        <div class="p-6 bg-indigo-50 rounded-3xl border-2 border-indigo-200 space-y-3 text-base sm:text-lg text-indigo-950">
+        <div class="sinbolo-normalizatuak-kaxa p-6 bg-indigo-50 rounded-3xl border-2 border-indigo-200 space-y-3 text-base sm:text-lg text-indigo-950">
           <h4 class="text-xl font-black text-indigo-900 flex items-center gap-2">
             <span>📐</span> Zergatik Erabiltzen Dira Sinbolo Normalizatuak?
           </h4>
@@ -2805,3 +2807,7 @@ const SUBTOPICS_DATA = {
     ]
   }
 };
+
+if (typeof window !== 'undefined') {
+  window.SUBTOPICS_DATA = SUBTOPICS_DATA;
+}

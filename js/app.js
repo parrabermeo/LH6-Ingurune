@@ -4,6 +4,7 @@
 
 const app = {
   currentView: 'home',
+  lastActiveThemeId: 1,
   sidebarOpen: false,
   circuitState: {
     mode: 'serie',
@@ -26,11 +27,20 @@ const app = {
     this.goTo('home');
   },
 
+  closeKeywordPopover() {
+    const pop = document.getElementById('floating-keyword-popover');
+    if (pop) pop.classList.add('hidden');
+  },
+
   // ==========================================================================
   // SPA ROUTER: BANAKAKO ORRIALDE BAKARRA ERRENDERIZATU (PÁGINAS INDIVIDUALES)
   // ==========================================================================
   goTo(viewId) {
     this.currentView = viewId;
+    if (viewId && viewId.startsWith('mod1')) this.lastActiveThemeId = 1;
+    else if (viewId && viewId.startsWith('mod2')) this.lastActiveThemeId = 2;
+    else if (viewId && viewId.startsWith('mod3')) this.lastActiveThemeId = 3;
+    else if (viewId && viewId.startsWith('mod4')) this.lastActiveThemeId = 4;
 
     const mainContainer = document.getElementById('app-main-content');
     if (!mainContainer) return;
@@ -117,7 +127,7 @@ const app = {
           <!-- CARD 1: EUROPA ETA EUSKADI (URDINA) -->
           <article onclick="app.goTo('mod1_sub1')" class="g-card rounded-[32px] overflow-hidden cursor-pointer flex flex-col justify-between border-t-8 border-t-blue-600 group">
             <div class="parallax-wrapper h-56 w-full relative">
-              <img src="images/mapa_politiko_fisikoa.jpg" alt="Europa mapa fisikoa eta politikoa" class="parallax-img w-full h-full object-cover">
+              <img src="images/mapa_fisikoa.jpg" alt="Europa mapa fisikoa eta politikoa" class="parallax-img w-full h-full object-cover">
               <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
               <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-blue-600 text-white shadow-md">
                 1. GAIA • URDINA
@@ -135,11 +145,17 @@ const app = {
                   Geografia fisikoa eta politikoa, 5 klimak, mapak, biztanleria, Europako hizkuntzak eta euskara, 3 lan sektoreak eta migrazioak.
                 </p>
               </div>
-              <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
-                <span class="text-sm font-bold text-blue-600">Arakatu Gaia (1.1 azpigaia) →</span>
-                <span class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 font-black flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm">
-                  ➜
+              <div class="pt-4 border-t border-gray-100 flex flex-wrap items-center justify-between gap-3">
+                <span class="text-sm font-bold text-blue-600 flex items-center gap-1.5">
+                  <span>Arakatu Gaia (1.1 azpigaia)</span>
+                  <span class="w-6 h-6 rounded-full bg-blue-50 text-blue-600 font-black inline-flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all text-xs">➜</span>
                 </span>
+                <button onclick="event.stopPropagation(); imprimatuTema(1);" 
+                        class="btn-print-theme inprimatu-btn print-action-button no-print inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-black shadow-sm hover:shadow transition-all cursor-pointer"
+                        title="Inprimatu edo deskargatu 1. Gaia PDF A4 formatuan">
+                  <span>📄</span>
+                  <span>Inprimatu / Deskargatu Gaia PDF</span>
+                </button>
               </div>
             </div>
           </article>
@@ -165,11 +181,17 @@ const app = {
                   Antolaketa-mailak, zelulak (prokariotoak eta eukariotoak), ehunak, organoak, 5 zentzumenak, nerbio-sistema, lokomozioa, ugalketa, ernalketa, haurdunaldia eta bizitzaren etapak.
                 </p>
               </div>
-              <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
-                <span class="text-sm font-bold text-emerald-600">Arakatu Gaia (2.1 azpigaia) →</span>
-                <span class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-600 font-black flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-all shadow-sm">
-                  ➜
+              <div class="pt-4 border-t border-gray-100 flex flex-wrap items-center justify-between gap-3">
+                <span class="text-sm font-bold text-emerald-600 flex items-center gap-1.5">
+                  <span>Arakatu Gaia (2.1 azpigaia)</span>
+                  <span class="w-6 h-6 rounded-full bg-emerald-50 text-emerald-600 font-black inline-flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-all text-xs">➜</span>
                 </span>
+                <button onclick="event.stopPropagation(); imprimatuTema(2);" 
+                        class="btn-print-theme inprimatu-btn print-action-button no-print inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-black shadow-sm hover:shadow transition-all cursor-pointer"
+                        title="Inprimatu edo deskargatu 2. Gaia PDF A4 formatuan">
+                  <span>📄</span>
+                  <span>Inprimatu / Deskargatu Gaia PDF</span>
+                </button>
               </div>
             </div>
           </article>
@@ -195,11 +217,17 @@ const app = {
                   Energiaren 4 propietateak, Euskadiko trantsizio ekologikoa (Mutrikuko olatu planta), zirkuitu elektriko interaktiboak seriean eta paraleloan, magnetismoa eta 5E metodoa.
                 </p>
               </div>
-              <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
-                <span class="text-sm font-bold text-amber-600">Arakatu Gaia (3.1 azpigaia) →</span>
-                <span class="w-10 h-10 rounded-full bg-amber-50 text-amber-600 font-black flex items-center justify-center group-hover:bg-amber-500 group-hover:text-white transition-all shadow-sm">
-                  ➜
+              <div class="pt-4 border-t border-gray-100 flex flex-wrap items-center justify-between gap-3">
+                <span class="text-sm font-bold text-amber-600 flex items-center gap-1.5">
+                  <span>Arakatu Gaia (3.1 azpigaia)</span>
+                  <span class="w-6 h-6 rounded-full bg-amber-50 text-amber-600 font-black inline-flex items-center justify-center group-hover:bg-amber-500 group-hover:text-white transition-all text-xs">➜</span>
                 </span>
+                <button onclick="event.stopPropagation(); imprimatuTema(3);" 
+                        class="btn-print-theme inprimatu-btn print-action-button no-print inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-black shadow-sm hover:shadow transition-all cursor-pointer"
+                        title="Inprimatu edo deskargatu 3. Gaia PDF A4 formatuan">
+                  <span>📄</span>
+                  <span>Inprimatu / Deskargatu Gaia PDF</span>
+                </button>
               </div>
             </div>
           </article>
@@ -225,11 +253,17 @@ const app = {
                   Iraultzen aroa, Inperioen aroa, Krisialdi garaia eta mundu gerrak, Espainiako guda zibila, Gernikako bonbardaketa, Frankismoa, eta Trantsizio demokratikoa Euskadin.
                 </p>
               </div>
-              <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
-                <span class="text-sm font-bold text-rose-600">Arakatu Gaia (4.1 azpigaia) →</span>
-                <span class="w-10 h-10 rounded-full bg-rose-50 text-rose-600 font-black flex items-center justify-center group-hover:bg-rose-600 group-hover:text-white transition-all shadow-sm">
-                  ➜
+              <div class="pt-4 border-t border-gray-100 flex flex-wrap items-center justify-between gap-3">
+                <span class="text-sm font-bold text-rose-600 flex items-center gap-1.5">
+                  <span>Arakatu Gaia (4.1 azpigaia)</span>
+                  <span class="w-6 h-6 rounded-full bg-rose-50 text-rose-600 font-black inline-flex items-center justify-center group-hover:bg-rose-600 group-hover:text-white transition-all text-xs">➜</span>
                 </span>
+                <button onclick="event.stopPropagation(); imprimatuTema(4);" 
+                        class="btn-print-theme inprimatu-btn print-action-button no-print inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-black shadow-sm hover:shadow transition-all cursor-pointer"
+                        title="Inprimatu edo deskargatu 4. Gaia PDF A4 formatuan">
+                  <span>📄</span>
+                  <span>Inprimatu / Deskargatu Gaia PDF</span>
+                </button>
               </div>
             </div>
           </article>
@@ -332,7 +366,7 @@ const app = {
     let vocabHtml = '';
     if (sub.relatedVocabulary && sub.relatedVocabulary.length > 0) {
       vocabHtml = `
-        <div class="g-card rounded-[28px] p-6 sm:p-8 bg-white border-2 ${themeBorderCard} shadow-md space-y-6 mt-12">
+        <div class="vocabulario-section hiztegi-section vocab-box g-card rounded-[28px] p-6 sm:p-8 bg-white border-2 ${themeBorderCard} shadow-md space-y-6 mt-12">
           <div class="flex items-center gap-3 border-b border-gray-100 pb-4">
             <span class="text-3xl">📖</span>
             <div>
@@ -361,10 +395,18 @@ const app = {
         <!-- CABECERA SUPERIOR DEL SUBTEMA CON BREADCRUMB -->
         <div class="bg-gradient-to-b from-${sub.themeColor}-50/70 via-white to-gray-50 border-b border-gray-200 py-16 px-4 sm:px-6 lg:px-8">
           <div class="max-w-4xl mx-auto space-y-4">
-            <div class="flex items-center gap-2 text-xs sm:text-sm font-bold text-${sub.themeColor}-700">
-              <button onclick="app.goTo('home')" class="hover:underline flex items-center gap-1"><span>🏠</span> Hasiera</button> <span>/</span>
-              <span>${sub.themeName}</span> <span>/</span>
-              <span class="text-gray-500">${sub.code}</span>
+            <div class="flex items-center justify-between flex-wrap gap-3">
+              <div class="flex items-center gap-2 text-xs sm:text-sm font-bold text-${sub.themeColor}-700">
+                <button onclick="app.goTo('home')" class="hover:underline flex items-center gap-1"><span>🏠</span> Hasiera</button> <span>/</span>
+                <span>${sub.themeName}</span> <span>/</span>
+                <span class="text-gray-500">${sub.code}</span>
+              </div>
+              <button onclick="imprimatuTema(${sub.themeId})" 
+                      class="btn-print-theme inprimatu-btn print-action-button btn-print-pdf no-print inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-white hover:bg-slate-50 text-slate-800 border-2 border-slate-300 hover:border-slate-500 text-xs sm:text-sm font-black shadow-sm hover:shadow transition-all cursor-pointer group"
+                      title="Deskargatu edo inprimatu ${sub.themeName} PDF A4 formatuan">
+                <span class="text-base group-hover:scale-110 transition-transform">📄</span>
+                <span>Inprimatu / Deskargatu Gaia PDF</span>
+              </button>
             </div>
             <span class="inline-block px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider ${themeBadgeBg}">
               ${sub.badge}
@@ -383,8 +425,66 @@ const app = {
           
           <article class="g-card rounded-[32px] p-8 sm:p-12 space-y-8 border-l-8 ${themeBorder}">
             
-            <!-- Imagen Destacada si existe (Osotasunean ikusteko egokitua + Bideo Integratua) -->
-            ${sub.image ? `
+            <!-- Imagen Destacada o Mapas Duales (Subtema 1.3) -->
+            ${key === 'mod1_sub3' ? `
+              <div class="space-y-4">
+                <!-- 2 MAPAS DE EUROPA: FISIKOA ETA POLITIKOA (IMAGEN B & IMAGEN C) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 map-dual-container">
+                  <!-- IMAGEN B: Mapa Fisikoa -->
+                  <div class="map-dual-card p-3 sm:p-4 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div class="w-full h-56 sm:h-64 rounded-xl overflow-hidden bg-slate-50 border border-gray-100 flex items-center justify-center p-1 cursor-pointer group"
+                         onclick="app.switchMapTab('fisikoa')"
+                         title="Klikatu Europako Mapa Fisikoa aztertzeko">
+                      <img src="images/mapa_fisikoa.jpg" alt="Europako Mapa Fisikoa" class="map-print-dual w-full h-full object-contain transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="mt-2.5 text-center">
+                      <span class="text-[11px] font-black uppercase tracking-wider text-emerald-700 block">Erliebea, Ibaiak & Itsasoak</span>
+                      <h4 class="text-base font-black text-gray-900 mt-0.5">🏔️ Europako Mapa Fisikoa</h4>
+                      <p class="text-xs text-gray-600 mt-1 leading-snug">Mendiak (Alpeak, Pirinioak...), lautadak eta ibai nagusiak (Volga, Danubio, Rhin...).</p>
+                    </div>
+                  </div>
+
+                  <!-- IMAGEN C: Mapa Politikoa -->
+                  <div class="map-dual-card p-3 sm:p-4 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div class="w-full h-56 sm:h-64 rounded-xl overflow-hidden bg-slate-50 border border-gray-100 flex items-center justify-center p-1 cursor-pointer group"
+                         onclick="app.switchMapTab('politikoa')"
+                         title="Klikatu Europako Mapa Politikoa aztertzeko">
+                      <img src="images/mapa_politikoa.jpg" alt="Europako Mapa Politikoa" class="map-print-dual w-full h-full object-contain transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="mt-2.5 text-center">
+                      <span class="text-[11px] font-black uppercase tracking-wider text-blue-700 block">49 Estatuak & Hiriburuak</span>
+                      <h4 class="text-base font-black text-gray-900 mt-0.5">🗺️ Europako Mapa Politikoa</h4>
+                      <p class="text-xs text-gray-600 mt-1 leading-snug">Europako 49 estatu independenteak, haien mugak eta hiriburu ofizialak.</p>
+                    </div>
+                  </div>
+                </div>
+
+                ${sub.videoUrl ? `
+                  <!-- BIDEO DIDAKTIKOAREN TXARTELA (YOUTUBE - LH 6) -->
+                  <div class="p-4 sm:p-5 bg-gradient-to-r from-red-50 via-rose-50 to-orange-50 rounded-2xl border-2 border-red-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm hover:shadow-md transition-all">
+                    <div class="flex items-center gap-3.5">
+                      <div class="w-12 h-12 rounded-2xl bg-red-600 text-white flex items-center justify-center shadow-md shrink-0">
+                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                      </div>
+                      <div>
+                        <div class="flex flex-wrap items-center gap-2">
+                          <span class="px-2.5 py-0.5 rounded-full text-[11px] font-black uppercase tracking-wider bg-red-600 text-white shadow-xs">Bideo Didaktikoa • LH 6</span>
+                          ${sub.videoAuthor ? `<span class="text-xs font-bold text-gray-600">Kanala: ${sub.videoAuthor}</span>` : ''}
+                        </div>
+                        <strong class="text-base sm:text-lg font-bold text-gray-900 block mt-1 leading-snug">${sub.videoTitle || 'Ikusi gaiarekin lotutako bideo didaktikoa'}</strong>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-2 w-full sm:w-auto shrink-0">
+                      <button onclick="app.playVideoInContainer('${key}', '${this.getYoutubeId(sub.videoUrl)}')" 
+                              class="w-full sm:w-auto px-5 py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-black text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer group"
+                              title="Erreproduzitu bideoa web orrialde honetan bertan">
+                        <span>▶️ Erreproduzitu Hemen</span>
+                      </button>
+                    </div>
+                  </div>
+                ` : ''}
+              </div>
+            ` : sub.image ? `
               <div class="space-y-4">
                 <div id="media-container-${key}" class="w-full rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-slate-50 flex items-center justify-center p-2 sm:p-3 relative">
                   ${sub.videoUrl ? `
@@ -444,7 +544,7 @@ const app = {
           ${vocabHtml}
 
           <!-- NAVEGACIÓN INFERIOR (AURREKOA, HASIERA, HURRENGOA) -->
-          <div class="flex flex-wrap items-center justify-between gap-4 pt-8 border-t border-gray-200">
+          <div class="subtopic-nav-footer no-print flex flex-wrap items-center justify-between gap-4 pt-8 border-t border-gray-200">
             <button onclick="app.goTo('${sub.prev}')" class="px-6 py-3.5 rounded-2xl bg-gray-100 hover:bg-gray-200 font-bold text-sm sm:text-base text-gray-700 transition-all flex items-center gap-2">
               <span>${sub.prevLabel}</span>
             </button>
@@ -494,7 +594,7 @@ const app = {
               <div class="mindmap-board">
                 <div class="mm-root-card border-blue-300">
                   <div class="w-full h-28 rounded-xl overflow-hidden mb-3 bg-blue-50 border border-blue-100">
-                    <img src="images/mapa_politiko_fisikoa.jpg" alt="Europa mapa" class="w-full h-full object-cover">
+                    <img src="images/mapa_fisikoa.jpg" alt="Europa mapa" class="w-full h-full object-cover">
                   </div>
                   <span class="text-[10px] font-black uppercase tracking-wider text-blue-700 block">LH 6. MAILA • EUSKADI</span>
                   <h4 class="text-base font-black font-title text-gray-900 mt-1 leading-snug">Europa, Biztanleria & Migrazioak</h4>
@@ -1128,6 +1228,10 @@ const app = {
     }
   },
 
+  printCurrentTopic() {
+    imprimatuTema();
+  },
+
   initSidebarHover() {
     const sidebar = document.getElementById('global-sidebar');
     const hoverTab = document.getElementById('sidebar-hover-tab');
@@ -1168,27 +1272,27 @@ const app = {
       atlantikoa: {
         title: '🌧️ Klima Ozeanikoa / Atlantikoa (Euskal Kostaldea)',
         desc: 'Prezipitazio ugariak urte osoan zehar eta tenperatura leunak itsasoaren eraginez. Hariztiak eta baso hosto-erorkorrak dira nagusi.',
-        img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&auto=format&fit=crop&q=80'
+        img: 'images/klima_ozeanikoa.jpg'
       },
       mediterraneoa: {
         title: '☀️ Klima Mediterraneoa (Hegoaldeko Europa)',
         desc: 'Uda bero eta oso lehorrak, eta negu epelak. Prezipitazio gutxi izaten dira; olibondoak, pinudiak eta arteak dira ohikoak.',
-        img: 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=600&auto=format&fit=crop&q=80'
+        img: 'images/klima_mediterraneoa.jpg'
       },
       kontinentala: {
         title: '🍂 Klima Kontinentala (Erdialdeko eta Ekialdeko Europa)',
         desc: 'Itsasotik urrun dauden eremuak. Negu oso hotzak eta elurtsuak, eta uda beroak. Taiga eta belardi erraldoiak (estepak).',
-        img: 'https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=600&auto=format&fit=crop&q=80'
+        img: 'images/klima_kontinentala.jpg'
       },
       polarra: {
         title: '❄️ Klima Polarra / Artikoa (Iparraldeko Muturra)',
         desc: 'Munduko tenperaturarik baxuenak (0ºC-tik behera maiz). Lurra izoztuta egoten da (permafrost) eta tundra landaredia dago.',
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBdtxun7fjzfrbrLGDxTOedH3SVB9qRl52A23Xl_i2fx6QDTBmDWTK_5M&s=10'
+        img: 'images/klima_polarra.jpg'
       },
       mendikoa: {
         title: '🏔️ Klima Mendikoa (Alpeak, Pirinioak, Kaukasoa)',
         desc: 'Gailur garaietan kokatua; altitudeak gora egin ahala tenperaturak behera egiten du eta elurra ugaria da neguan.',
-        img: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/VittfarneGeorgien_155.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original'
+        img: 'images/klima_mendikoa.jpg'
       }
     };
 
@@ -1315,9 +1419,10 @@ const app = {
     const container = document.getElementById('countries-grid');
     if (!container) return;
 
+    container.className = 'banderak-grid estatuak-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3';
     container.innerHTML = this.countriesData.map((c, idx) => `
       <div onclick="app.showCountryDetail(${idx})" 
-           class="p-3 bg-white hover:bg-blue-50/90 rounded-2xl border border-blue-100 hover:border-blue-400 shadow-sm hover:shadow-md cursor-pointer transition-all duration-200 hover:-translate-y-1 flex flex-col items-center text-center group relative"
+           class="country-card p-3 bg-white hover:bg-blue-50/90 rounded-2xl border border-blue-100 hover:border-blue-400 shadow-sm hover:shadow-md cursor-pointer transition-all duration-200 hover:-translate-y-1 flex flex-col items-center text-center group relative"
            title="Egin klik ${c.name} estatuaren fitxa ikusteko">
         <div class="w-14 h-9 mb-2 rounded-lg overflow-hidden border border-slate-200 shadow-sm group-hover:scale-110 transition-transform duration-200 flex items-center justify-center bg-slate-100">
           <img src="images/flags/${c.code}.svg" alt="${c.name} bandera" class="w-full h-full object-cover">
@@ -2424,3 +2529,277 @@ const app = {
 document.addEventListener('DOMContentLoaded', () => {
   app.init();
 });
+
+// FUNZIO GLOBALA INPRIMATZEKO: TEMA OSOA / BLOKE OSOA (KOADERNOTXOA A4)
+// Estrategia: Contenedor separado #print-booklet-container.
+// #app-main-content EZ DA ALDATZEN — SPA egoera bere horretan geratzen da.
+function imprimatuTema(targetThemeId) {
+  const printContainer = document.getElementById('print-booklet-container');
+  if (!printContainer) {
+    window.print();
+    return;
+  }
+  if (printContainer.innerHTML.trim() !== '') {
+    return; // Ya está preparando una impresión
+  }
+
+  const appObj = (typeof app !== 'undefined') ? app : (window.app || null);
+  const data = (typeof SUBTOPICS_DATA !== 'undefined') ? SUBTOPICS_DATA : (window.SUBTOPICS_DATA || {});
+
+  // 1. Cerrar sidebar, modales y popovers si estuvieran abiertos
+  if (appObj) {
+    if (typeof appObj.closeSidebar === 'function') appObj.closeSidebar();
+    if (typeof appObj.closeCountryModal === 'function') appObj.closeCountryModal();
+    if (typeof appObj.closeKeywordPopover === 'function') appObj.closeKeywordPopover();
+  }
+
+  // 2. Identificar cuál es el tema/bloque activo actual (Tema 1, 2, 3 o 4)
+  let currentThemeId = targetThemeId ? parseInt(targetThemeId, 10) : ((appObj && appObj.lastActiveThemeId) || 1);
+  let currentKey = (appObj && appObj.currentView) || 'mod1_sub1';
+  let themeName = '1. Gaia: Europa & Euskadi';
+
+  if (!targetThemeId) {
+    if (currentKey && currentKey !== 'home') {
+      if (data[currentKey] && data[currentKey].themeId) {
+        currentThemeId = data[currentKey].themeId;
+        themeName = data[currentKey].themeName;
+      } else if (currentKey.startsWith('mod1')) {
+        currentThemeId = 1;
+        themeName = '1. Gaia: Europa & Euskadi';
+      } else if (currentKey.startsWith('mod2')) {
+        currentThemeId = 2;
+        themeName = '2. Gaia: Izaki Bizidunak';
+      } else if (currentKey.startsWith('mod3')) {
+        currentThemeId = 3;
+        themeName = '3. Gaia: Energia & Elektrizitatea';
+      } else if (currentKey.startsWith('mod4')) {
+        currentThemeId = 4;
+        themeName = '4. Gaia: Aro Garaikidea';
+      }
+    } else {
+      // Si está en home sin targetThemeId, usar el último tema activo
+      if (currentThemeId === 2) themeName = '2. Gaia: Izaki Bizidunak';
+      else if (currentThemeId === 3) themeName = '3. Gaia: Energia & Elektrizitatea';
+      else if (currentThemeId === 4) themeName = '4. Gaia: Aro Garaikidea';
+      else {
+        currentThemeId = 1;
+        themeName = '1. Gaia: Europa & Euskadi';
+      }
+    }
+  } else {
+    if (currentThemeId === 2) themeName = '2. Gaia: Izaki Bizidunak';
+    else if (currentThemeId === 3) themeName = '3. Gaia: Energia & Elektrizitatea';
+    else if (currentThemeId === 4) themeName = '4. Gaia: Aro Garaikidea';
+    else {
+      currentThemeId = 1;
+      themeName = '1. Gaia: Europa & Euskadi';
+    }
+  }
+
+  if (appObj) appObj.lastActiveThemeId = currentThemeId;
+
+  // 3. Recopilar TODOS los subtemas del tema activo
+  const themeSubtopics = Object.entries(data)
+    .filter(([k, v]) => v.themeId === currentThemeId);
+
+  if (themeSubtopics.length === 0) {
+    window.print();
+    return;
+  }
+
+  // 4. Portada A4 exclusiva al inicio del tema
+  const coverImageSrc = `images/portada_tema_${currentThemeId}.jpg`;
+  const coverAlt = `Portada Gaia ${currentThemeId}`;
+  const coverHTML = `
+    <div class="theme-cover-page" id="tema-${currentThemeId}">
+      <img src="${coverImageSrc}" alt="${coverAlt}" class="cover-image" />
+    </div>
+  `;
+
+  // 4.1 Mostrar TODO el contenido del tema activo en #print-booklet-container directamente
+  let bookletHTML = coverHTML + themeSubtopics.map(([key, sub]) => {
+    const rendered = (appObj && typeof appObj.renderSubtopicView === 'function')
+      ? appObj.renderSubtopicView(key, sub)
+      : '';
+    return `<div class="print-subtopic-block" data-subtopic="${key}">${rendered}</div>`;
+  }).join('');
+
+  // 4.1 Incluir el mapa mental interactivo del tema (Buru-Mapa) como última página en A4 Horizontal (Landscape)
+  if (appObj && typeof appObj.renderMindmapView === 'function') {
+    const mindmapKey = 'mod' + currentThemeId + '_mindmap';
+    const mindmapRawHtml = appObj.renderMindmapView(mindmapKey);
+    if (mindmapRawHtml) {
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = mindmapRawHtml;
+
+      // Ocultar y remover controles de zoom, botones interactivos o herramientas
+      tempDiv.querySelectorAll('button, .zoom-controls, .map-tools').forEach(b => b.remove());
+
+      // Extraer el contenedor del mapa mental
+      const mindmapWrapper = tempDiv.querySelector('.mindmap-wrapper');
+      const contentToAppend = mindmapWrapper ? mindmapWrapper.outerHTML : tempDiv.innerHTML;
+
+      // Título superior limpio para el mapa mental
+      let cleanTitle = '1. GAIA: EUROPA & EUSKADI – BURU-MAPA OROKORRA';
+      if (currentThemeId === 2) cleanTitle = '2. GAIA: IZAKI BIZIDUNAK – BURU-MAPA OROKORRA';
+      else if (currentThemeId === 3) cleanTitle = '3. GAIA: ENERGIA & ELEKTRIZITATEA – BURU-MAPA OROKORRA';
+      else if (currentThemeId === 4) cleanTitle = '4. GAIA: ARO GARAIKIDEA – BURU-MAPA OROKORRA';
+      else if (themeName) cleanTitle = `${themeName.toUpperCase()} – BURU-MAPA OROKORRA`;
+
+      bookletHTML += `
+        <div class="print-subtopic-block print-buru-mapa-page">
+          <div class="print-buru-mapa buru-mapa-print-container print-landscape-page" id="print-buru-mapa">
+            <div class="print-landscape-header buru-mapa-header">
+              <h2 class="print-landscape-title buru-mapa-title">${cleanTitle}</h2>
+            </div>
+            ${contentToAppend}
+          </div>
+        </div>
+      `;
+    }
+  }
+
+  printContainer.innerHTML = bookletHTML;
+
+  // 5. Inicializaciones de contenido para impresión
+  if (currentThemeId === 1) {
+    // 5.1 Cuadrícula completa de 49 países (Subtema 1.3)
+    const printCountriesGrid = printContainer.querySelector('#countries-grid') || printContainer.querySelector('#country-grid') || printContainer.querySelector('.banderak-grid');
+    if (printCountriesGrid && appObj && appObj.countriesData) {
+      printCountriesGrid.className = 'banderak-grid estatuak-grid';
+      printCountriesGrid.innerHTML = appObj.countriesData.map((c) => `
+        <div class="country-card">
+          <img src="images/flags/${c.code}.svg" alt="${c.name} bandera" class="bandera-img flag-img" width="26" height="17">
+          <strong>${c.name}</strong>
+          <span>🏛️ ${c.cap}</span>
+        </div>
+      `).join('');
+    }
+
+    // 5.2 Mostrar los 5 climas completos (Subtema 1.2)
+    const climateBox = printContainer.querySelector('#climate-display-box');
+    if (climateBox) {
+      const allClimates = [
+        {
+          title: '🌧️ Klima Ozeanikoa / Atlantikoa (Euskal Kostaldea)',
+          desc: 'Prezipitazio ugariak urte osoan zehar eta tenperatura leunak itsasoaren eraginez. Hariztiak eta baso hosto-erorkorrak dira nagusi.',
+          img: 'images/klima_ozeanikoa.jpg'
+        },
+        {
+          title: '☀️ Klima Mediterraneoa (Hegoaldeko Europa)',
+          desc: 'Uda bero eta oso lehorrak, eta negu epelak. Prezipitazio gutxi izaten dira; olibondoak, pinudiak eta arteak dira ohikoak.',
+          img: 'images/klima_mediterraneoa.jpg'
+        },
+        {
+          title: '🍂 Klima Kontinentala (Erdialdeko eta Ekialdeko Europa)',
+          desc: 'Itsasotik urrun dauden eremuak. Negu oso hotzak eta elurtsuak, eta uda beroak. Taiga eta belardi erraldoiak (estepak).',
+          img: 'images/klima_kontinentala.jpg'
+        },
+        {
+          title: '❄️ Klima Polarra / Artikoa (Iparraldeko Muturra)',
+          desc: 'Munduko tenperaturarik baxuenak (0ºC-tik behera maiz). Lurra izoztuta egoten da (permafrost) eta tundra landaredia dago.',
+          img: 'images/klima_polarra.jpg'
+        },
+        {
+          title: '🏔️ Klima Mendikoa (Alpeak, Pirinioak, Kaukasoa)',
+          desc: 'Gailur garaietan kokatua; altitudeak gora egin ahala tenperaturak behera egiten du eta elurra ugaria da neguan.',
+          img: 'images/klima_mendikoa.jpg'
+        }
+      ];
+
+      climateBox.className = 'print-climates-container space-y-2 mt-2';
+      climateBox.innerHTML = `
+        <h4 class="text-sm font-black text-gray-900 mb-1">Europako 5 Klima Nagusiak:</h4>
+        <div class="grid grid-cols-1 gap-2">
+          ${allClimates.map(c => `
+            <div class="print-climate-card p-2 rounded-xl border border-blue-200 bg-blue-50/60 flex items-center gap-3">
+              <img src="${c.img}" alt="${c.title}" class="klima-img rounded border border-blue-200" style="display: block !important; max-height: 120px !important; width: auto !important; object-fit: cover !important; margin: 4px auto !important;">
+              <div class="flex-1 min-w-0">
+                <strong class="text-xs font-bold text-blue-900 block leading-tight">${c.title}</strong>
+                <p class="text-[9pt] text-gray-700 leading-snug m-0 mt-0.5">${c.desc}</p>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // 5.3 Ocultar ejercicio práctico en subtema 1.6 ("Praktikatu: Zein sektoretakoa da lanbide hau?")
+    const jobQuiz = printContainer.querySelector('#job-quiz-box');
+    if (jobQuiz) {
+      const quizContainer = jobQuiz.closest('.p-5') || jobQuiz;
+      quizContainer.style.display = 'none';
+    }
+  }
+
+  // 5.4 Eliminar por completo todas las secciones de vocabulario en el booklet de impresión
+  printContainer.querySelectorAll('[class*="hiztegi"], .vocabulario-section, .vocab-box').forEach(el => el.remove());
+  printContainer.querySelectorAll('h3, h4').forEach(h => {
+    if (h.textContent && (h.textContent.includes('Hiztegi') || h.textContent.includes('hiztegi'))) {
+      const parentCard = h.closest('.g-card') || h.closest('.rounded-[28px]') || (h.parentElement && h.parentElement.parentElement && h.parentElement.parentElement.parentElement);
+      if (parentCard && parentCard !== printContainer) parentCard.remove();
+    }
+  });
+
+  // 5.5 Eliminar bloque Demografia Eragiketak (Fitxako Ariketa) en subtema 1.7
+  printContainer.querySelectorAll('[class*="demografia-eragiketak"], [class*="fitxako-ariketa"]').forEach(el => el.remove());
+  printContainer.querySelectorAll('h4, div').forEach(el => {
+    if (el.textContent && (el.textContent.includes('Demografia Eragiketak (Fitxako Ariketa)') || el.textContent.includes('Biztanleriaren Hazkunde Erreala = Saldo Naturala + Migrazio Saldoa'))) {
+      const box = el.closest('.p-5') || el.closest('.demografia-eragiketak') || el;
+      if (box && box !== printContainer) box.remove();
+    }
+  });
+
+  // 5.6 Eliminar texto interactivo residual de climas ("Europako 5 Klima Nagusiak (Arakatu Klik Eginez):")
+  printContainer.querySelectorAll('h3').forEach(h => {
+    if (h.textContent && h.textContent.includes('Arakatu Klik Eginez')) {
+      h.remove();
+    }
+  });
+
+  // 5.7 Limpiar botones, controles de zoom o herramientas dentro del Buru-Mapa
+  const printBuruMapa = printContainer.querySelector('#print-buru-mapa');
+  if (printBuruMapa) {
+    printBuruMapa.querySelectorAll('button, .zoom-controls, .map-tools').forEach(el => el.remove());
+  }
+
+  // 5.8 Tema 3: Ocultar únicamente los dos elementos concretos (caja de gráfico y simulador)
+  const grafikoBox = printContainer.querySelector('#grafiko-kutxa, .trantsizio-datuak, [id*="energia-portzentajeak"]');
+  if (grafikoBox) grafikoBox.remove();
+
+  const simulatorBox = printContainer.querySelector('#circuito-interactivo, #simulador-bombillas, .simulador-container');
+  if (simulatorBox) simulatorBox.remove();
+
+  const quickChallengeBox = printContainer.querySelector('#circuit-quick-challenge');
+  if (quickChallengeBox) quickChallengeBox.remove();
+
+  const quiz3Box = printContainer.querySelector('#theme3-master-quiz');
+  if (quiz3Box) quiz3Box.remove();
+
+  // 6. Añadir el listener window.onafterprint para limpiar y volver a la vista normal
+  let cleaned = false;
+  function cleanupPrintContainer() {
+    if (cleaned) return;
+    cleaned = true;
+    printContainer.innerHTML = '';
+    window.onafterprint = null;
+  }
+
+  window.onafterprint = cleanupPrintContainer;
+  window.addEventListener('afterprint', cleanupPrintContainer, { once: true });
+
+  // 7. Lanzar ventana de impresión tras dar tiempo al DOM para renderizarse
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      window.print();
+    }, 100);
+  });
+}
+
+// Exponer en el ámbito global
+window.imprimatuTema = imprimatuTema;
+if (typeof app !== 'undefined') window.app = app;
+if (typeof SUBTOPICS_DATA !== 'undefined') window.SUBTOPICS_DATA = SUBTOPICS_DATA;
+
+
+
